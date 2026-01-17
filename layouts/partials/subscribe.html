@@ -1,0 +1,30 @@
+{{ "<!-- Start Subscribe Section -->" | safeHTML }}
+<section>
+    <style>
+        .vertical-align {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .vertical-align > [class^="col-"],
+        .vertical-align > [class*=" col-"] {
+            display: flex;
+            align-items: center;     /* Align the flex-items vertically */
+            /* Optional, to align inner flex-items
+                              horizontally within the column  */
+        }
+    </style>
+    <div style="width:100%; background: #f6f6f6; padding: 10px 0px 10px 0px;">
+    <div class="row vertical-align mx-auto" style="max-width: 800px;">
+        <div class="col-auto" style="padding: 0px 15px 0px 15px; max-width: 800px; width: 50%">
+            <font size="4.5">Don't miss out on all the latest news and events!</font>
+        </div>
+        <div class="col-auto offset-mobile-1">
+            <button style="cursor: pointer; color:white; font-weight: 600" type="button" class="btn btn-main subscribe-button" onclick="location.href= 'https://uni-lj.us19.list-manage.com/subscribe?u=d4508fe2de3e88c55cf59e657&id=240a6af4e5'";>Subscribe</button>
+           
+        </div>
+    </div>
+    </div>
+</section>
+{{ "<!-- Start Subscribe Section -->" | safeHTML }}

@@ -1,0 +1,40 @@
+baseURL = 'http://example.org/'
+languageCode = 'en-us'
+title = 'DataScience@UL-FRI'
+theme = 'beautifulhugo'
+lastmod = 2026-01-01T00:00:00-00:00  
+buildFuture = true
+
+[params]
+  subtitle = "Just a simple website"
+  logo = "img/avatar.png" # You can add your own logo later
+  favicon = "img/favicon.png"
+  dateFormat = "January 2, 2006"
+  since = 2019
+  year = 2026
+  custom_css = ["css/custom.css"]
+
+# This creates the top navigation menu
+[[menu.main]]
+    name = "Master's"
+    url = ""
+    weight = 1
+
+[[menu.main]]
+    name = "Events"
+    url = "events/"
+    weight = 2
+
+[[menu.main]]
+    name = "Competition"
+    url = "competition/"
+    weight = 4   
+
+[[menu.main]]
+    name = "Partnership"
+    url = "partnership/"
+    weight = 5
+
+
+
+  

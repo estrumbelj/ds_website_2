@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap');
+
+body, 
+button, 
+input, 
+select, 
+textarea, 
+.btn, 
+.subscribe-text {
+    font-family: 'Titillium Web', sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6, .navbar-brand, .post-title, .post-subtitle {
+    font-family: 'Titillium Web', sans-serif !important;
+}
+
+/* Event List Container */
+.event-list-container {
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+.event-item {
+    border-bottom: 1px solid #eee;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+/* The clickable area */
+details > summary {
+    list-style: none; /* Hides default triangle */
+    cursor: pointer;
+    outline: none;
+}
+
+/* Remove default triangle in Webkit (Chrome/Safari) */
+details > summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Layout for Date and Title */
+.event-header {
+    display: flex;
+    align-items: baseline;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.event-date {
+    font-family: 'Titillium Web', sans-serif !important;
+    font-weight: 700;
+    color: #007bff; /* Blue accent color */
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+.event-title {
+    font-family: 'Titillium Web', sans-serif !important;
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    display: inline;
+}
+
+.event-title:hover {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+.event-excerpt {
+    font-family: 'Titillium Web', sans-serif !important;
+    color: #666;
+    margin-left: 0; /* Align with left edge */
+}
+
+.read-more-text {
+    font-size: 0.8rem;
+    color: #999;
+    font-style: italic;
+}
+
+/* The hidden content when expanded */
+.event-body {
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #f9f9f9; /* Light grey background for expanded content */
+    border-left: 4px solid #007bff;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Simple animation for smooth appearance */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
