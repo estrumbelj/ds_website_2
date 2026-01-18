@@ -1,0 +1,14 @@
+<section class="home-section partners">
+  <h2>Partners</h2>
+
+  <div class="partners-grid">
+    {{ $images := readDir "static/partners" }}
+    {{ range $images }}
+      {{ if not .IsDir }}
+        <div class="partner-logo">
+          <img src="/partners/{{ .Name }}" alt="Partner logo">
+        </div>
+      {{ end }}
+    {{ end }}
+  </div>
+</section>

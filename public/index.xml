@@ -6,49 +6,140 @@
     <description>Recent content on DataScience@UL-FRI</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 15 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 27 Jan 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Big Winter Workshop</title>
-      <link>http://localhost:1313/events/test_workshop---copy-2/</link>
-      <pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/events/test_workshop---copy-2/</guid>
-      <description>Join us for a full day of coding in the snow. Click to see the schedule.</description>
+      <title>Spark sessions 006</title>
+      <link>http://localhost:1313/news/spark006/</link>
+      <pubDate>Tue, 27 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/news/spark006/</guid>
+      <description>&lt;h4 id=&#34;spark-sessions-006&#34;&gt;Spark sessions 006&lt;/h4&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;&lt;strong&gt;When?&lt;/strong&gt; January 27 2026 at 18:00.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Where?&lt;/strong&gt; Faculty of Computer and Information Science, Večna pot 113, Ljubljana.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;What?&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Sunsei: 5-Day Solar Forecasts, Powered by a Novel Regional AI Model - NWPsolarNet&lt;/strong&gt;&lt;br&gt;&#xA;by Marko Rus (Data Scientist, Medius)&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;NWPsolarNet revolutionizes solar forecasting, moving beyond localized, data-intensive methods. This innovative model, trained on over 300 diverse sites, provides accurate 5-day forecasts for virtually any location, currently focused on Slovenia, without needing historical site-specific data. We&amp;rsquo;ll detail NWPsolarNet&amp;rsquo;s technical aspects and introduce Sunsei, a public tool offering powerful forecasting for solar energy optimization.&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Big Winter Workshop</title>
-      <link>http://localhost:1313/events/test_workshop---copy-3/</link>
+      <title>Announcing the 2026 Project competition topics</title>
+      <link>http://localhost:1313/news/pc2026topics/</link>
       <pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/events/test_workshop---copy-3/</guid>
-      <description>Join us for a full day of coding in the snow. Click to see the schedule.</description>
+      <guid>http://localhost:1313/news/pc2026topics/</guid>
+      <description>&lt;h3 id=&#34;topics-for-the-2026-project-competition&#34;&gt;Topics for the 2026 Project competition&lt;/h3&gt;&#xA;&lt;hr&gt;&#xA;&lt;hr&gt;&#xA;&lt;h4 id=&#34;in516ht&#34;&gt;In516ht&lt;/h4&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;In516ht is a specialized data consulting and solutions firm that focuses on big data analytics, business intelligence, and cloud data warehousing. Based in Slovenia with a global reach, they are a premier snowflake partner and assist enterprises with data migration, modernization, and the implementation of advanced predictive analytics to drive better business decision-making. Projects below are prepared in collaboration with Emirates Insurance, one of the pioneering insurance companies in the middle east region.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Big Winter Workshop</title>
-      <link>http://localhost:1313/events/test_workshop---copy-4/</link>
-      <pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/events/test_workshop---copy-4/</guid>
-      <description>Join us for a full day of coding in the snow. Click to see the schedule.</description>
+      <title>Practical Deterministic Optimization: Maximizing Profit via Optimal Battery Scheduling by Nevena Pivač</title>
+      <link>http://localhost:1313/news/workshop005/</link>
+      <pubDate>Wed, 17 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/news/workshop005/</guid>
+      <description></description>
     </item>
     <item>
-      <title>Big Winter Workshop</title>
-      <link>http://localhost:1313/events/test_workshop---copy-5/</link>
-      <pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/events/test_workshop---copy-5/</guid>
-      <description>Join us for a full day of coding in the snow. Click to see the schedule.</description>
+      <title>Spark sessions 005</title>
+      <link>http://localhost:1313/news/spark005/</link>
+      <pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/news/spark005/</guid>
+      <description>&lt;h4 id=&#34;spark-sessions-005&#34;&gt;Spark sessions 005&lt;/h4&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;&lt;strong&gt;When?&lt;/strong&gt; November 18 2025 at 18:00.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Where?&lt;/strong&gt; Faculty of Computer and Information Science, Večna pot 113, Ljubljana.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;What?&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;A new and improved traffic model for Slovenia - leveraging mobile positioning data&lt;/strong&gt;  by Leon Hvastja (Data scientist, Medius)&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;Are we able to replace classic survey-based traffic models using mobile data? Mobile telecommunication logs generate vast datasets on user positions, offering a powerful resource for modeling daily movement patterns. However, effectively harnessing this data presents significant challenges, including complex noise reduction, the absence of a ground truth for validation, and the need for computationally efficient algorithms to handle the sheer volume of data.&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Big Winter Workshop</title>
-      <link>http://localhost:1313/events/test_workshop---copy/</link>
-      <pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/events/test_workshop---copy/</guid>
-      <description>Join us for a full day of coding in the snow. Click to see the schedule.</description>
+      <title>Spark sessions 004</title>
+      <link>http://localhost:1313/news/spark004/</link>
+      <pubDate>Tue, 10 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/news/spark004/</guid>
+      <description>&lt;h4 id=&#34;spark-sessions-004&#34;&gt;Spark sessions 004&lt;/h4&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;&lt;strong&gt;When?&lt;/strong&gt; June 10 2025 at 18:00.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Where?&lt;/strong&gt; Faculty of Computer and Information Science, Večna pot 113, Ljubljana.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;What?&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;On the Surprising Benefits of Vibe-Coding for Interdisciplinary Collaboration&lt;/strong&gt; by Boshko Koloski (Young Researcher, Jozef Stefan Institute)&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;Stepping midstream, inter-disciplinary project—where documentation is sparse and data are disorganized—poses a significant challenge. Thanks to recent advances in LLMs, live “vibe-coding” workshops now offer a practical way to bridge those gaps. In this talk, I will present case studies from interdisciplinary collabs which real-time LLM-driven coding enabled teams to explore, prototype, and co-construct understanding on the fly, even under tight deadlines and uncertain conditions.&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Big Winter Workshop</title>
-      <link>http://localhost:1313/events/test_workshop/</link>
-      <pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/events/test_workshop/</guid>
-      <description>Join us for a full day of coding in the snow. Click to see the schedule.</description>
+      <title>Project competition 2025 results</title>
+      <link>http://localhost:1313/news/pc2025results/</link>
+      <pubDate>Mon, 02 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/news/pc2025results/</guid>
+      <description>&lt;p&gt;In the first week of June, we concluded the 2025 DataScience@UL-FRI Project Competition. Again, a big thank you to everyone who was a part of this competition, from students to faculty and industry advisors. A special mention goes to our sponsors: In516ht, Medius, Outbrain, Teads, and PredictLeads. There would be no competition without you!&lt;/p&gt;&#xA;&lt;p&gt;The competition started in January 2025 with student applications. This year we had 12 teams and 36 students working on 10 different project topics.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Spark sessions 003</title>
+      <link>http://localhost:1313/news/spark003/</link>
+      <pubDate>Tue, 25 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/news/spark003/</guid>
+      <description>&lt;h4 id=&#34;spark-sessions-003&#34;&gt;Spark sessions 003&lt;/h4&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;&lt;strong&gt;When?&lt;/strong&gt; Feb 25 2025 at 18:00.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Where?&lt;/strong&gt; Faculty of Computer and Information Science, Večna pot 113, Ljubljana.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;What?&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Game, Set, Match: Neural Networks in Tennis Video Analysis&lt;/strong&gt; by Ivan Ivashnev (Senior Computer Vision Engineer, Sportradar)&#xA;&lt;em&gt;In this presentation, we’ll explore how AI and neural networks revolutionize tennis video analysis. We’ll dive into the models we use, our approach to video processing, and the insights we generate. From identifying player movements to extracting performance metrics, discover how technology is shaping the future of sports analytics.&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Spark sessions 002</title>
+      <link>http://localhost:1313/news/spark002/</link>
+      <pubDate>Tue, 10 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/news/spark002/</guid>
+      <description>&lt;h4 id=&#34;spark-sessions-002&#34;&gt;Spark sessions 002&lt;/h4&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;&lt;strong&gt;When?&lt;/strong&gt; Dec 10 2024 at 18:00.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Where?&lt;/strong&gt; Faculty of Computer and Information Science, Večna pot 113, Ljubljana.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;What?&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Intro: Is There a Data Engineering Minimum for a Professional Data Scientist?&lt;/strong&gt; by Erik Štrumbelj&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Seeing Through Data: Eye Tracking Insights into Graph Comprehension&lt;/strong&gt; by Leon Hvastja (Data Science Student, University of Ljubljana)&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;Eye-tracking technology has gained traction over the past decade, mainly due to its increased availability. Traditionally, graphs were evaluated through performance metrics, but eye tracking offers a deeper understanding of the underlying cognitive processes involved. This technology has broad applications, including in education to enhance learning, in understanding disabilities, building cognitive models of perception, and understanding the differences between expert and non-expert users.&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Spark sessions 001</title>
+      <link>http://localhost:1313/news/spark001/</link>
+      <pubDate>Tue, 22 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/news/spark001/</guid>
+      <description>&lt;h4 id=&#34;spark-sessions-001&#34;&gt;Spark sessions 001&lt;/h4&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;&lt;strong&gt;When?&lt;/strong&gt; Oct 22 2024 at 18:00.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Where?&lt;/strong&gt; Faculty of Computer and Information Science, Večna pot 113, Ljubljana (lecture room: TBA).&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;What?&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;LLMDataForge: Framework that Leverages Large Language Models (LLMs) to Generate High-quality Datasets Tailored to Your Needs&lt;/strong&gt;  by Gal Petkovšek (Data Scientist at Medius) and Tadej Justin (Chief Data Scientist at Medius)&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;This talk explores generating high-quality synthetic datasets using LLMs, utilising the LLMDataForge framework for filtering and prompt adjustments to enhance training smaller models for NLP tasks.&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Project competition 2024 results</title>
+      <link>http://localhost:1313/news/pc2024results/</link>
+      <pubDate>Thu, 06 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/news/pc2024results/</guid>
+      <description>&lt;p&gt;In the first week of June, we concluded the 2024 DataScience@UL-FRI Project Competition. Again, a big thank you to everyone who was a part of this competition, from students to faculty and industry advisors. A special mention goes to our sponsors: CREAPRO, In516ht, Medius, Outbrain, PC7, Siemens and ZCAM. There would be no competition without you!&lt;/p&gt;&#xA;&lt;p&gt;The competition started in January 2024 with student applications, this year around, we accepted 19 out of 27 teams. The competition then ran for 5 months and saw our competitors work on 18 different project topics based on either practical problems from our colleagues in the industry or more academic problems proposed by us. Just like in previous years, most groups produced really high quality results. Even though most of solutions were on a high level, there were a couple that stood out from the rest. This year’s awardess are:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Project competition 2023 results</title>
+      <link>http://localhost:1313/news/pc2023results/</link>
+      <pubDate>Tue, 06 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/news/pc2023results/</guid>
+      <description>&lt;p&gt;On Jun 6 we concluded the 2023 DataScience@UL-FRI Project Competition. At this point we would again like to thank everyone who was a part of this competition, from students to faculty and industry advisors. A special mention goes to our sponsors. There would be no competition without you! So, a wholehearthad thank you to CREApro, In516ht, Lexpera, Medius, Outbrain, Siemens and Zurich Insurance.&lt;/p&gt;&#xA;&lt;p&gt;The competition started in Jan 2023, it ran for 6 months and saw 19 teams work on 12 different project topics based on practical problems from our colleagues in the industry. Just like in previous years, most groups produced really high quality results. Even though most of solutions were on a high level, there were a couple that stood out from the rest. This year&amp;rsquo;s awardess are:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Project competition 2022 results</title>
+      <link>http://localhost:1313/news/pc2022results/</link>
+      <pubDate>Tue, 21 Jun 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/news/pc2022results/</guid>
+      <description>&lt;p&gt;On Jun 21 we concluded the 2022 project competition. After a one year break, we were again able to execute the final event live! At this point we would again like to thank everyone who was a part of this competition. A special mention goes to our sponsors: Celtra, CREApro, Databox, Garex, In516ht, Garex, Siemens and Zemanta. Without our sponsors there would be no data science project competition.&lt;/p&gt;&#xA;&lt;p&gt;The competition started in Jan 2022, it ran for 6 months and saw 14 teams work on 11 different project topics base on practical problems from our colleagues from the industry. As a result all of the end results were very good. We are already looking forward to next year&amp;rsquo;s competition!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Project competition 2021 results</title>
+      <link>http://localhost:1313/news/pc2021results/</link>
+      <pubDate>Thu, 09 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/news/pc2021results/</guid>
+      <description>&lt;p&gt;On Sep 9 we concluded the 2021 Project competition. Unfortunately the pandemic situation forced us to organize an online final event this time. Hopefully, the 2022 event will be again held live. At this point we would again like to thank everyone who was a part of this competition in one form or another.&lt;/p&gt;&#xA;&lt;p&gt;The competition started in Feb 2021, it ran for 7 months and saw 11 teams work on 9 different project topics motivated by problems from industry. The amount of hours poured into the projects was staggering &amp;ndash; the combined effort of all competitors was just shy of 4000 hours. As a result all of the end results were very good. We are already looking forward to next year’s competition!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Project competition 2020 results</title>
+      <link>http://localhost:1313/news/pc2020results/</link>
+      <pubDate>Thu, 10 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/news/pc2020results/</guid>
+      <description>&lt;p&gt;On Sep 10 we concluded the 2020 Project competition] with the finalists&amp;rsquo; presentations and a poster session. Congratulations to all the awardees and a big thank you to all students who participated and mentors from industry and FRI!&lt;/p&gt;&#xA;&lt;p&gt;The competition that started in Feb 2020 and ran for 5 months saw 16 teams work on 10 different project topics motivated by problems from industry, putting in a combined effort of over 3000 hours. We are already looking forward to next year&amp;rsquo;s competition!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/competition/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/competition/</guid>
+      <description>&lt;hr&gt;&#xA;&lt;p&gt;The DataScience@UL-FRI Project Competition is an annual competition whose main goal is to connect students, academics, and industry. Over the course of a semester teams of students work on real-world data science problems guided by co-supervisors from academia and industry. The best teams are invited to present their work at the competition finals. The competition allows companies to showcase their challenges to academics and gives students the opportunity to gain hands-on experience in a structured but fun way.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/events/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/events/</guid>
+      <description>&lt;h3 id=&#34;workshops&#34;&gt;Workshops&lt;/h3&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;Workshops are organized periodically and on demand (at UL-FRI or on-site). To arrange a workshop or for more information please contact us at &lt;a href=&#34;mailto:datascience@fri.uni-lj.si&#34;&gt;&lt;strong&gt;datascience@fri.uni-lj.si&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;To learn about all upcoming Workshops subscribe to our Newsletter below.&lt;/p&gt;&#xA;&lt;h3 id=&#34;spark-sessions&#34;&gt;Spark sessions&lt;/h3&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/spark_sessions_logo.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;The Spark sessions are a recurring event designed to facilitate the exchange of ideas and inspiration. The event consists of several snappy presentations, followed by a casual gathering with refreshments.&lt;/p&gt;&#xA;&lt;p&gt;Interested in giving a talk? &lt;a href=&#34;http://localhost:1313/spark/&#34;&gt;&lt;strong&gt;Apply here&lt;/strong&gt;&lt;/a&gt;!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/masters/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/masters/</guid>
+      <description>&lt;h3 id=&#34;data-science-masters-program&#34;&gt;Data science Master&amp;rsquo;s program&lt;/h3&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;Our Master&amp;rsquo;s of Computer and Data Science is a state-of-the-art, intensive, and rewarding program that focuses on equipping students with the theoretical foundations, practical knowledge, and hands-on experience. If you are a student with a technical or mathematical background and you aspire to be a leading data science professional, researcher, or teacher of data science, then this program is for you!&lt;/p&gt;&#xA;&lt;p&gt;The program is part of the Faculty of Computer and Information Science (University of Ljubljana) second-cycle master&amp;rsquo;s study program Computer and Information Science. Upon completion, graduates earn the title Master of Computer and Data Science.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/partials/intro/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/partials/intro/</guid>
+      <description>&lt;p&gt;We advance data science education and community with our Master’s program, workshops, meetups, and industry partnerships.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/partnership/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/partnership/</guid>
+      <description>&lt;h3 id=&#34;industry-partnership&#34;&gt;Industry partnership&lt;/h3&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;Our vision is to provide our students with a world-class data science education. This would not be possible without a strong collaboration with industry, which is key to maintaining the high standards of our data science initiative and providing a complete learning experience for our students. To this end we want to develop longer-term relationships with companies that share our vision.&lt;/p&gt;&#xA;&lt;p&gt;Collaboration is based on an annual or multi-year sponsorship agreement. The core benefits are&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

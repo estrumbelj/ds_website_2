@@ -1,0 +1,99 @@
+{{ $news := where .Site.RegularPages "Section" "news" }}
+{{ $news = $news.ByDate.Reverse }}
+{{ $news = first 15 $news }}
+
+<style>
+.latest-news {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+	min-width: 300px;
+	max-width: 600px;	
+    width: 100%;
+}
+
+.latest-news li {
+    border: 1px solid #e5e5e5;   /* light border */
+    border-radius: 4px;
+    padding: 1em;
+    margin-bottom: 1em;
+    background: #fff;
+}
+
+.latest-news h4 {
+    margin: 0 0 0.3em 0;
+    font-size: 1.04em;
+}
+
+.latest-news .date {
+    font-size: 0.72em;
+    color: #666;
+    font-style: italic;
+}
+
+.latest-news .read-more {
+
+    text-decoration: none;
+
+}
+
+.latest-news .read-more:hover {
+    text-decoration: underline;
+}
+
+.news-type {
+    color: #aaa;
+    font-style: italic;
+    margin-right: 0.25em;
+}
+
+.latest-news li {
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    padding: 1em;
+    margin-bottom: 1em;
+    background: #fff;
+    text-align: left;   /* keep everything left */
+}
+
+.latest-news .read-more {
+    display: block;        /* makes alignment possible */
+    text-align: right;     /* align only this element */
+    margin-top: 0.5em;
+}
+
+.latest-news .news-item {
+	font-size: 80%;
+}
+
+</style>
+
+<section class="home-section partners">
+  <h2>Latest news and events</h2>
+
+  <ul class="latest-news">
+    {{ range $news }}
+      <li class="news-item">
+        <h4>
+          {{ with .Params.type }}
+            <span class="news-type">({{ . }})</span>
+          {{ end }}
+          {{ .Title }}
+        </h4>
+
+        <div class="date">{{ .Date.Format "Jan 2, 2006" }}</div>
+
+        {{ $summary := .Summary | plainify | trim " \n\t" }}
+        {{ $content := .Content | markdownify | plainify | trim " \n\t" }}
+			
+
+
+        {{ if gt (len .Content) (0) }}
+		          <a class="read-more" href="{{ .RelPermalink }}">(read more)</a>
+        {{ else }}
+
+        {{ end }}
+      </li>
+    {{ end }}
+  </ul>
+</section>

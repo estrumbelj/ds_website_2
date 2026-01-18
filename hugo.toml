@@ -12,12 +12,11 @@ buildFuture = true
   dateFormat = "January 2, 2006"
   since = 2019
   year = 2026
-  custom_css = ["css/custom.css"]
 
 # This creates the top navigation menu
 [[menu.main]]
     name = "Master's"
-    url = ""
+    url = "masters/"
     weight = 1
 
 [[menu.main]]

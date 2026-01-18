@@ -1,0 +1,10 @@
+<ul>
+{{ $pages := where .Site.RegularPages "Section" "news" }}
+{{ range $pages }}
+  {{ if in (lower .Title) "results" }}
+    {{ if in (lower .Title) "project competition" }}
+    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+  {{ end }}
+   {{ end }}
+{{ end }}
+</ul>

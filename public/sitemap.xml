@@ -2,31 +2,67 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/events/</loc>
-    <lastmod>2026-01-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/events/test_workshop---copy-2/</loc>
-    <lastmod>2026-01-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/events/test_workshop---copy-3/</loc>
-    <lastmod>2026-01-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/events/test_workshop---copy-4/</loc>
-    <lastmod>2026-01-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/events/test_workshop---copy-5/</loc>
-    <lastmod>2026-01-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/events/test_workshop---copy/</loc>
-    <lastmod>2026-01-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/events/test_workshop/</loc>
-    <lastmod>2026-01-15T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/</loc>
+    <lastmod>2026-01-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/news/</loc>
+    <lastmod>2026-01-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/news/spark006/</loc>
+    <lastmod>2026-01-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/news/pc2026topics/</loc>
     <lastmod>2026-01-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/news/workshop005/</loc>
+    <lastmod>2025-12-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/news/spark005/</loc>
+    <lastmod>2025-11-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/news/spark004/</loc>
+    <lastmod>2025-06-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/news/pc2025results/</loc>
+    <lastmod>2025-06-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/news/spark003/</loc>
+    <lastmod>2025-02-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/news/spark002/</loc>
+    <lastmod>2024-12-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/news/spark001/</loc>
+    <lastmod>2024-10-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/news/pc2024results/</loc>
+    <lastmod>2024-06-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/news/pc2023results/</loc>
+    <lastmod>2023-06-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/news/pc2022results/</loc>
+    <lastmod>2022-06-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/news/pc2021results/</loc>
+    <lastmod>2021-09-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/news/pc2020results/</loc>
+    <lastmod>2020-09-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/competition/</loc>
+  </url><url>
+    <loc>http://localhost:1313/events/</loc>
+  </url><url>
+    <loc>http://localhost:1313/masters/</loc>
+  </url><url>
+    <loc>http://localhost:1313/partials/intro/</loc>
+  </url><url>
+    <loc>http://localhost:1313/partnership/</loc>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
+  </url><url>
+    <loc>http://localhost:1313/partials/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
   </url>
