@@ -1,6 +1,6 @@
 {{ $news := where .Site.RegularPages "Section" "news" }}
 {{ $news = $news.ByDate.Reverse }}
-{{ $news = first 15 $news }}
+{{ $news = first 5 $news }}
 
 <style>
 .latest-news {
