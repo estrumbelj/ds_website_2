@@ -9,7 +9,7 @@ This year's competition is closed to external participants.
 
 [DataScience@UL-FRI Project Competition 2026 Topics](/news/pc2026topics/)
 
-#### Past Competitions and Awardees
+#### Project Competition History
 ------
 
 {{< pc-links >}}
