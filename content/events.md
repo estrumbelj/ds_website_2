@@ -1,7 +1,7 @@
 ### Workshops
 ------
 
-Workshops are organized periodically and on demand (at UL-FRI or on-site). To arrange a workshop or for more information please contact us at [**datascience@fri.uni-lj.si**](mailto:datascience@fri.uni-lj.si).
+Workshops are organized periodically and on demand (at UL-FRI or on-site). To arrange a workshop or for more information please contact us at [datascience@fri.uni-lj.si](mailto:datascience@fri.uni-lj.si).
 
 To learn about all upcoming Workshops subscribe to our Newsletter below.
 
