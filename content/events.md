@@ -12,7 +12,7 @@ To learn about all upcoming Workshops subscribe to our Newsletter below.
 
 The Spark sessions are a recurring event designed to facilitate the exchange of ideas and inspiration. The event consists of several snappy presentations, followed by a casual gathering with refreshments.
 
-Interested in giving a talk? [**Apply here**](/spark/)!
+Interested in giving a talk? [Apply here](/spark/)!
 
 **Our Spark sessions partners**
 
