@@ -2,7 +2,7 @@
 title: "Spark sessions 002"
 date: 2024-12-10
 draft: false
-type: "event"
+type: "meetup"
 ---
 
 #### Spark sessions 002

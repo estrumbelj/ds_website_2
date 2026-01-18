@@ -1,1 +1,1 @@
-We advance data science education and community with our Master’s program, workshops, meetups, and industry partnerships.
+We advance data science education and community with our Master’s program, events, and industry partnerships.
