@@ -1,4 +1,4 @@
-baseURL = 'http://datascience.fri.uni-lj.si/'
+baseURL = 'https://datascience.fri.uni-lj.si/'
 languageCode = 'en-us'
 title = 'DataScience@UL-FRI'
 theme = 'beautifulhugo'
