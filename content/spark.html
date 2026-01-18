@@ -6,7 +6,7 @@ title: "Spark"
 
 <p>Talks must be between 5 and 7 minutes long. Topics include, but are not limited to, showcasing your company, project, insights, best practices, methods, or software. We will prioritize talks based on interest to the broader data science (AI, machine learning, business analytics, IT) community.</p>
 
-<p>We review applications on a rolling basis and typically respond within 2 weeks. </p>
+<p>We review applications on a rolling basis and typically respond within a week. </p>
 
 <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
   <input type="hidden" name="form-name" value="contact">
@@ -18,24 +18,24 @@ title: "Spark"
   </p>
 
   <p><label>Name:</label><br>
-    <input type="text" name="name" required>
+    <input type="text" size="40" name="name" required>
   </p>
 
   <p><label>Affiliation and role:</label><br>
-    <input type="text" name="role">
+    <input type="text" size="40"name="role">
   </p>
 
   <p><label>Email:</label><br>
-    <input type="email" name="email" required>
+    <input type="email" size="40" name="email" required>
   </p>
 
   <p><label>Talk title:</label><br>
-    <input type="text" name="title">
+    <input type="text" size="40" name="title">
   </p>
 
   <p><label>Talk summary (500 characters limit):</label><br>
-    <textarea name="summary" rows="12" maxlength="500"></textarea>
+    <textarea name="summary" rows="12" cols="60" maxlength="500" style="width: 382px"></textarea>
   </p>
 
-  <p><button type="submit">Send</button></p>
+  <p><button class = "btn btn-main subscribe-button" style="cursor: pointer; color:white; font-weight: 600"  type="submit">Send</button></p>
 </form>

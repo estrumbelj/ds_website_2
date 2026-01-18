@@ -65,6 +65,29 @@
 .latest-news .news-item {
 	font-size: 80%;
 }
+	
+@media (prefers-color-scheme: dark) {
+
+  .news-type {
+    color: #aaa;
+		background-color: #000;
+  } 
+  
+    .news-type2 {
+    color: #FFF;
+		background-color: #000;
+  } 
+
+  .date {
+    color: #fff;
+		background-color: #000;
+  }    
+  
+  .latest-news li {
+    background: #000;
+  }
+  
+}	
 
 </style>
 
@@ -76,9 +99,12 @@
       <li class="news-item">
         <h4>
           {{ with .Params.type }}
-            <span class="news-type">({{ . }})</span>
+            <span class="news-type">({{ . }}) </span>
           {{ end }}
-          {{ .Title }}
+  <span class="news-type2">{{ .Title }} </span>
+
+	
+        
         </h4>
 
         <div class="date">{{ .Date.Format "Jan 2, 2006" }}</div>
