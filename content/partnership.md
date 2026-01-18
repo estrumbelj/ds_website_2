@@ -13,4 +13,4 @@ Collaboration is based on an annual or multi-year sponsorship agreement. The cor
 
 Sponsors also have the option of sponsoring Data Science Master's students. More substantive collaboration, such as student projects and Master's theses, is tailored to the needs of each individual sponsor.
 
-If you are interested in becoming a partner, please contact us at datascience@fri.uni-lj.si.
+If you are interested in becoming a partner, please contact us at [datascience@fri.uni-lj.si](mailto:datascience@fri.uni-lj.si).
