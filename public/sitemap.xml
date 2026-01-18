@@ -64,6 +64,10 @@
   </url><url>
     <loc>http://localhost:1313/partials/</loc>
   </url><url>
+    <loc>http://localhost:1313/spark/</loc>
+  </url><url>
     <loc>http://localhost:1313/tags/</loc>
+  </url><url>
+    <loc>http://localhost:1313/thanks/</loc>
   </url>
 </urlset>

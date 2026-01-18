@@ -99,7 +99,7 @@ Keywords: information extraction, geographic entity resolution, cost-efficient n
 #### DS@FRI
 ------
 
-**Slovenian-Language OCR Benchmark (in collaboration with Valira.ai)**
+**Slovenian-Language OCR Benchmark (in collaboration with Valira AI)**
 
 This project aims to lay the groundwork for an OCR benchmark for Slovenian language, providing a fair, transparent, and reproducible framework for evaluating emerging vision-language models (VLMs) and other OCR systems. The first step is to identify the specific tasks to include (text recognition, handwriting recognition, table extraction, document layout analysis etc.), and determining the metrics for evaluation. The benchmark can utilize either synthetic datasets or build upon existing resources, such as Šolar or KAS. Both traditional OCR systems (EasyOCR, Tesseract) and newer, emerging solutions (GPT, Gemini, Deepseek OCR, Mistral OCR) should be included in the evaluation.
 

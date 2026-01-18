@@ -111,14 +111,14 @@
       <link>http://localhost:1313/competition/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/competition/</guid>
-      <description>&lt;hr&gt;&#xA;&lt;p&gt;The DataScience@UL-FRI Project Competition is an annual competition whose main goal is to connect students, academics, and industry. Over the course of a semester teams of students work on real-world data science problems guided by co-supervisors from academia and industry. The best teams are invited to present their work at the competition finals. The competition allows companies to showcase their challenges to academics and gives students the opportunity to gain hands-on experience in a structured but fun way.&lt;/p&gt;</description>
+      <description>&lt;h3 id=&#34;data-science-project-competition&#34;&gt;Data science Project competition&lt;/h3&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;The DataScience@UL-FRI Project Competition is an annual competition whose main goal is to connect students, academics, and industry. Over the course of a semester teams of students work on real-world data science problems guided by co-supervisors from academia and industry. The best teams are invited to present their work at the competition finals. The competition allows companies to showcase their challenges to academics and gives students the opportunity to gain hands-on experience in a structured but fun way.&lt;/p&gt;</description>
     </item>
     <item>
       <title></title>
       <link>http://localhost:1313/events/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/events/</guid>
-      <description>&lt;h3 id=&#34;workshops&#34;&gt;Workshops&lt;/h3&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;Workshops are organized periodically and on demand (at UL-FRI or on-site). To arrange a workshop or for more information please contact us at &lt;a href=&#34;mailto:datascience@fri.uni-lj.si&#34;&gt;&lt;strong&gt;datascience@fri.uni-lj.si&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;To learn about all upcoming Workshops subscribe to our Newsletter below.&lt;/p&gt;&#xA;&lt;h3 id=&#34;spark-sessions&#34;&gt;Spark sessions&lt;/h3&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;&lt;img src=&#34;./img/spark_sessions_logo.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;The Spark sessions are a recurring event designed to facilitate the exchange of ideas and inspiration. The event consists of several snappy presentations, followed by a casual gathering with refreshments.&lt;/p&gt;&#xA;&lt;p&gt;Interested in giving a talk? &lt;a href=&#34;./spark/&#34;&gt;&lt;strong&gt;Apply here&lt;/strong&gt;&lt;/a&gt;!&lt;/p&gt;</description>
+      <description>&lt;h3 id=&#34;workshops&#34;&gt;Workshops&lt;/h3&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;Workshops are organized periodically and on demand (at UL-FRI or on-site). To arrange a workshop or for more information please contact us at &lt;a href=&#34;mailto:datascience@fri.uni-lj.si&#34;&gt;datascience@fri.uni-lj.si&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;To learn about all upcoming Workshops subscribe to our Newsletter below.&lt;/p&gt;&#xA;&lt;h3 id=&#34;spark-sessions&#34;&gt;Spark sessions&lt;/h3&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/spark_sessions_logo.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;The Spark sessions are a recurring event designed to facilitate the exchange of ideas and inspiration. The event consists of several snappy presentations, followed by a casual gathering with refreshments.&lt;/p&gt;&#xA;&lt;p&gt;Interested in giving a talk? &lt;a href=&#34;http://localhost:1313/spark/&#34;&gt;Apply here&lt;/a&gt;!&lt;/p&gt;</description>
     </item>
     <item>
       <title></title>
@@ -132,7 +132,7 @@
       <link>http://localhost:1313/partials/intro/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/partials/intro/</guid>
-      <description>&lt;p&gt;We advance data science education and community with our Master’s program, workshops, meetups, and industry partnerships.&lt;/p&gt;</description>
+      <description>&lt;p&gt;We advance data science education and community with our Master’s program, events, and industry partnerships.&lt;/p&gt;</description>
     </item>
     <item>
       <title></title>
@@ -140,6 +140,20 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/partnership/</guid>
       <description>&lt;h3 id=&#34;industry-partnership&#34;&gt;Industry partnership&lt;/h3&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;Our vision is to provide our students with a world-class data science education. This would not be possible without a strong collaboration with industry, which is key to maintaining the high standards of our data science initiative and providing a complete learning experience for our students. To this end we want to develop longer-term relationships with companies that share our vision.&lt;/p&gt;&#xA;&lt;p&gt;Collaboration is based on an annual or multi-year sponsorship agreement. The core benefits are&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Spark</title>
+      <link>http://localhost:1313/spark/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/spark/</guid>
+      <description>&lt;p&gt;Are you interested in contributing a talk to the DataScience@UL-FRI Spark Sessions? Fill out the form below and apply!&lt;/p&gt;&#xA;&#xA;&lt;p&gt;Talks must be between 5 and 7 minutes long. Topics include, but are not limited to, showcasing your company, project, insights, best practices, methods, or software. We will prioritize talks based on interest to the broader data science (AI, machine learning, business analytics, IT) community.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;We review applications on a rolling basis and typically respond within 2 weeks. &lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Thank You</title>
+      <link>http://localhost:1313/thanks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/thanks/</guid>
+      <description>&lt;p&gt;Thanks for your submission! We&amp;rsquo;ll get back to you shortly.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

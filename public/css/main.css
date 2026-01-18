@@ -1,5 +1,9 @@
 /* --- General --- */
 
+html {
+  color-scheme: light;
+}
+
 body {
   font-family: 'Lora', 'Times New Roman', serif;
   font-size: 16px;
