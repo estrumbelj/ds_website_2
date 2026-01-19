@@ -8,7 +8,7 @@ type: "meetup"
 #### Spark sessions 006
 ------
 
-Want to attend? Attendance is free. Apply [here](https://www.eventbrite.com/e/spark-sessions-006-tickets-1980698227718?aff=oddtdtcreator).
+The Spark Sessions are a recurring event of the Data Science Initiative at the Faculty of Computer and Information Science. They are designed to facilitate the exchange of ideas and inspiration. The event consists of several snappy (5-7 min) presentations, followed by a casual gathering with refreshments.
 
 __When?__ January 27 2026 at 18:00.
 
@@ -35,4 +35,9 @@ __Evaluations in the World of Agents__
 by Jan Hartman (Machine Learning Engineer, Sourcegraph)  
 
 *As practitioners in data science and machine learning, we're trained to evaluate every change we make. From offline loss metrics to online A/B tests, we measure everything to ensure data-driven decisions. In the world of AI and agents, however, both input and output spaces are effectively infinite. This talk discusses what this means and presents learnings from hands-on work on agentic systems.*  
+
+Want to attend? Attendance is free. [Apply here](https://www.eventbrite.com/e/spark-sessions-006-tickets-1980698227718?aff=oddtdtcreator).
+
+Interested in giving a talk at one of the future events? [Apply here](/spark/)!
+
 
