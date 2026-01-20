@@ -68,7 +68,7 @@ Keywords: digital advertising, deep learning, big data, large language models, h
 #### PredictLeads
 -------
 
-PredictLeads is a business intelligence data provider that tracks company growth and buying intent signals by analyzing millions of public sources. Their platform extracts structured data on job openings, technology adoption, and news events to help sales teams, venture capitalists, and quantitative funds identify high-potential leads and monitor market shifts in real-time.
+PredictLeads is a business intelligence data provider that tracks company growth and buying intent signals by analyzing millions of public sources. Their platform extracts structured data on job openings, technology adoption, and news events to help sales teams, market research teams, and investment companies identify high-potential leads and monitor market shifts in real-time.
 
 **Detecting and extracting multiple logos from a single image**
 
