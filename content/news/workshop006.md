@@ -1,0 +1,6 @@
+---
+title: "Discovering AI tools in Azure by Leon Hvastja and Gal Petkovšek"
+date: 2026-03-04
+draft: false
+type: "workshop"
+---
