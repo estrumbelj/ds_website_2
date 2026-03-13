@@ -22,6 +22,6 @@ Workshops are organized periodically and on demand (at UL-FRI or on-site). To ar
 
 To learn about all upcoming Workshops subscribe to our Newsletter below.
 
-**Workshops history**
+**Workshop history**
 
 {{< workshop-links >}}
