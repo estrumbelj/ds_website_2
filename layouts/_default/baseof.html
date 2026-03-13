@@ -3,10 +3,27 @@
 {{ end }}
 
 <!DOCTYPE html>
-<html lang="{{ .Lang }}" itemscope itemtype="http://schema.org/WebPage" style="color-scheme: light;>
-  <head>
-    {{ partial "head.html" . }}
-  </head>
+	<html lang="{{ .Lang }}" itemscope itemtype="http://schema.org/WebPage" style="color-scheme: light;>
+	  <head>
+	      {{ partial "head.html" . }}
+		  	  <style>
+	  html, body {
+		background-color: white !important;
+		color: black !important;
+		color-scheme: light !important;
+	  }
+	  @media (prefers-color-scheme: dark) {
+		html, body {
+		  background-color: white !important;
+		  color: black !important;
+		}
+	  }
+	</style>
+
+	 </head>
+
+
+
   <body>
     {{ partial "nav.html" . }}
     {{ block "header" . }}{{ partial "header.html" . }}{{ end }}
