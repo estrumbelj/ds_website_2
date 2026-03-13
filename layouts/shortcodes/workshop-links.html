@@ -2,7 +2,7 @@
 {{ $pages := where .Site.RegularPages "Section" "news" }}
 {{ range $pages }}
   {{ if in (lower .Type) "workshop" }}
-    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+    <li>{{ .Title }}</li>
   {{ end }}
 {{ end }}
 </ul>
