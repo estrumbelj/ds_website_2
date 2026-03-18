@@ -20,11 +20,13 @@ __Building a Movie Recommendation Agent__
 by Rok Novosel (Member of Technical Staff, Poolside)  
 
 *I'll talk about how I built a movie recommendation LLM agent (movieagent.io) to solve Friday movie nights for me and my wife.*
+
 *I'll go through the following:*
-*- How to design multi-agent architectures for recommendations*
-*- How to improve retrieval with synthetic data*
-*- How to design the user experience around agents*
-*- How to evaluate an agent-driven recommendation system*  
+
+- *How to design multi-agent architectures for recommendations*
+- *How to improve retrieval with synthetic data*
+- *How to design the user experience around agents*
+- *How to evaluate an agent-driven recommendation system* 
 
 __Lestvica embeddingov za slovenščino (LES)__  
 by Neli Čatar (Student, UL FRI and Data Scientist, Valira AI)  
