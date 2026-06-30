@@ -1,6 +1,6 @@
 ---
 title: "Project competition 2026 results"
-date: 2025-06-02
+date: 2026-06-02
 draft: false
 type: "news"
 ---
