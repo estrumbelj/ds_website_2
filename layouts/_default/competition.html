@@ -1,5 +1,15 @@
 {{ define "main" }}
 {{- $c := hugo.Data.competition -}}
+{{- /*
+  The latest results are read directly from whichever content/news/ post has
+  a `winners` front-matter list -- not from a separately maintained data
+  file. Writing a new pcXXXXresults.md post with a `winners` list is the only
+  thing needed each year; the year shown here and the "results page" link
+  both follow automatically from that post's own date and URL.
+*/ -}}
+{{- $results := (where (where site.RegularPages "Section" "news") "Params.winners" "!=" nil).ByDate.Reverse -}}
+{{- $latest := "" -}}
+{{- if gt (len $results) 0 }}{{ $latest = index $results 0 }}{{ end -}}
 <div class="section page-hero pb-20">
   <p class="eyebrow">{{ .Params.eyebrow }}</p>
   <h1>{{ .Params.heading | default .Title }}</h1>
@@ -16,9 +26,10 @@
     {{- end }}
   </div>
 
-  <h2 class="section-label mt-64">{{ $c.resultsYear }} results</h2>
+  {{- if $latest }}
+  <h2 class="section-label mt-64">{{ $latest.Date.Format "2006" }} results</h2>
   <div class="winners mt-26">
-    {{- range $i, $w := $c.winners }}
+    {{- range $i, $w := (first 3 $latest.Params.winners) }}
     <div class="winner{{ if eq $i 0 }} winner--top{{ end }}">
       <div class="winner__place">{{ $w.place }}</div>
       <h3>{{ $w.title }}</h3>
@@ -28,9 +39,10 @@
     {{- end }}
   </div>
   <p style="font-size:14.5px;color:var(--muted);margin:26px 0 0">
-    Check out full results for the {{ $c.resultsYear }} edition on the
-    <a href="{{ $c.resultsPage | relURL }}">results page</a>.
+    Check out full results for the {{ $latest.Date.Format "2006" }} edition on the
+    <a href="{{ $latest.RelPermalink }}">results page</a>.
   </p>
+  {{- end }}
 
   <div class="prose mt-70">{{ .Content }}</div>
 </div>

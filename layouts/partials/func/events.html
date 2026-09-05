@@ -4,8 +4,10 @@
 
   Front matter honoured (all optional):
     type      meetup | workshop | news | competition   (default: news)
+    time      start time, e.g. "18:00" -- prepended to meta when set
     short     label shown inside a calendar cell
-    meta      one line of practical detail (time, room, presenter)
+    meta      one line of practical detail (room, presenter); time is
+              prepended to this automatically when the time field is set
     register  URL of a registration/ticket page
     cta       label for the registration button
 */ -}}
@@ -47,6 +49,16 @@
     {{- end -}}
   {{- end -}}
 
+  {{- /* Start time, prepended to the detail line when set */ -}}
+  {{- $time := .Params.time -}}
+  {{- if $time -}}
+    {{- if $meta -}}
+      {{- $meta = printf "%s · %s" $time $meta -}}
+    {{- else -}}
+      {{- $meta = $time -}}
+    {{- end -}}
+  {{- end -}}
+
   {{- /* Title as shown in cards: workshops drop the trailing "by <presenter>" */ -}}
   {{- $display := .Title -}}
   {{- if and (eq $kind "workshop") (strings.Contains .Title " by ") -}}
@@ -65,6 +77,7 @@
       "title"    .Title
       "display"  $display
       "short"    $short
+      "time"     (default "" $time)
       "meta"     $meta
       "url"      .RelPermalink
       "register" (default "" .Params.register)

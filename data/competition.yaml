@@ -1,4 +1,6 @@
-# How a competition edition runs.
+# How a competition edition runs. (Results/winners are no longer kept here --
+# they're read directly from whichever content/news/ post has a `winners`
+# front-matter list; see layouts/_default/competition.html.)
 steps:
   - when: January
     title: Topics and applications
@@ -12,20 +14,3 @@ steps:
   - when: June
     title: Results
     body: A committee scores the finalists and the awards are announced.
-
-# Latest results. Mirrors content/news/pc2026results.md.
-resultsYear: 2026
-resultsPage: /news/pc2026results/
-winners:
-  - place: First place
-    title: Slovenian-Language OCR Benchmark
-    partner: DS@FRI
-    team: Tjaš Ajdovec, Gal Dvoršak, Denis Nedić
-  - place: Second place
-    title: Detecting and extracting multiple logos from a single image
-    partner: PredictLeads
-    team: Dimitar Djorlev, Petar Mishov, Hristijan Jovanoski
-  - place: Third place
-    title: Optimizing manufacturing processes with explainable AI
-    partner: Medius
-    team: Erika Rosenfeld, Caio Simon, Diana Catana

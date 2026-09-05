@@ -4,6 +4,7 @@ date: {{ .Date }}
 draft: true
 type: "news"
 # short: "Calendar label"
-# meta: "18:00 · FRI, lecture room P22"
+# time: "18:00"
+# meta: "FRI, lecture room P22"
 # register: "https://..."
 ---
