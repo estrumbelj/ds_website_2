@@ -5,12 +5,7 @@ draft: false
 type: "competition"
 ---
 
-### Topics for the 2026 Project competition
-------
-
-------
-
-#### In516ht
+## In516ht
 
 ------
 
@@ -35,7 +30,7 @@ Emirates Insurance works with various brokers who bring in business. However, no
 Keywords: predictive modeling, time-series analysis, performance scoring, business intelligence
 
 ------
-#### Medius
+## Medius
 ------
 
 Medius is an award-winning Slovenian software engineering company and technology solutions provider that helps companies achieve higher business impact through innovative, data-driven approaches. Medius specializes in facilitating machine learning and data science to solve complex, non-standard problems.
@@ -47,7 +42,7 @@ This project was prepared in collaboration with the Elrad International Group, a
 Keywords: process optimization, explainable AI, high-dimensional tabular data, smart manufacturing, root cause analysis, model benchmarking
 
 -------
-#### Teads
+## Teads
 -------
 
 Teads is a global media and advertising technology platform that specializes in digital advertising. The company provides an omnichannel platform that connects premium publishers with top-tier brands, using predictive AI to optimize ad creative and placement across mobile and web.
@@ -65,7 +60,7 @@ Batch prompting significantly enhances large language model (LLM) inference effi
 Keywords: digital advertising, deep learning, big data, large language models, hardware limitations
 
 -------
-#### PredictLeads
+## PredictLeads
 -------
 
 PredictLeads is a business intelligence data provider that tracks company growth and buying intent signals by analyzing millions of public sources. Their platform extracts structured data on job openings, technology adoption, and news events to help sales teams, market research teams, and investment companies identify high-potential leads and monitor market shifts in real-time.
@@ -96,7 +91,7 @@ Keywords: information extraction, geographic entity resolution, cost-efficient n
 
 
 ------
-#### DS@FRI
+## DS@FRI
 ------
 
 **Slovenian-Language OCR Benchmark (in collaboration with Valira AI)**

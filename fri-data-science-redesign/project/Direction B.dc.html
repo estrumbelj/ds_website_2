@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body { background: #0e1116; color: #e8eaee; font-family: 'Open Sans', Helvetica, sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: #4da3ff; text-decoration: none; }
+  a:hover { color: #8cc4ff; }
+  ::selection { background: #1d4b7d; }
+  @keyframes tick { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: .25; } }
+</style>
+</helmet>
+
+<div style="min-height:100vh;display:flex;flex-direction:column;background:#0e1116">
+
+  <header style="position:sticky;top:0;z-index:60;background:rgba(14,17,22,.88);backdrop-filter:blur(12px);border-bottom:1px solid #1e232c">
+    <div style="max-width:1240px;margin:0 auto;padding:12px 28px;min-height:70px;display:flex;align-items:center;gap:20px;flex-wrap:wrap">
+      <a href="#" onClick="{{ goHome }}" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff">
+        <span style="width:10px;height:10px;border-radius:50%;background:#008AFF;display:block;box-shadow:0 0 0 4px rgba(0,138,255,.18)"></span>
+        <span style="font-family:'Lora',Georgia,serif;font-size:19px;font-weight:600;letter-spacing:-.01em">DataScience<span style="color:#6b7480">@</span>UL-FRI</span>
+      </a>
+      <nav style="display:flex;gap:2px;margin-left:auto;align-items:center;flex-wrap:wrap;row-gap:6px">
+        <sc-for list="{{ navItems }}" as="item" hint-placeholder-count="4">
+          <a href="#" onClick="{{ item.go }}" style="padding:8px 13px;border-radius:6px;font-size:14px;font-weight:600;letter-spacing:.01em;color:{{ item.color }};background:{{ item.bg }};text-decoration:none">{{ item.label }}</a>
+        </sc-for>
+        <a href="#" onClick="{{ goMasters }}" style="margin-left:16px;padding:10px 17px;border-radius:6px;background:#008AFF;color:#fff;font-size:13.5px;font-weight:700;text-decoration:none">Apply 2027/28</a>
+      </nav>
+    </div>
+  </header>
+
+  <div style="background:#12171f;border-bottom:1px solid #1e232c;overflow:hidden">
+    <div style="display:flex;align-items:center;max-width:1240px;margin:0 auto">
+      <div style="display:flex;align-items:center;gap:8px;padding:0 20px 0 28px;height:42px;flex:none;border-right:1px solid #1e232c">
+        <span style="width:6px;height:6px;border-radius:50%;background:#008AFF;animation:pulse 1.8s ease-in-out infinite;display:block"></span>
+        <span style="font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#8b949e">Live</span>
+      </div>
+      <div style="overflow:hidden;flex:1;mask-image:linear-gradient(90deg,#000 88%,transparent)">
+        <div style="display:flex;width:max-content;animation:tick 40s linear infinite">
+          <sc-for list="{{ ticker }}" as="t" hint-placeholder-count="8">
+            <span style="padding:0 26px;height:42px;display:flex;align-items:center;font-size:13px;color:#a7b0bb;white-space:nowrap">
+              <span style="color:{{ t.fg }};font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:10.5px;margin-right:9px">{{ t.kind }}</span>
+              {{ t.text }}
+            </span>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main style="flex:1">
+
+  <!-- ============ HOME ============ -->
+  <sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
+  <div>
+    <section style="max-width:1240px;margin:0 auto;padding:76px 28px 56px">
+      <h1 style="font-family:'Lora',Georgia,serif;font-size:clamp(38px,6.2vw,70px);line-height:1.02;font-weight:600;letter-spacing:-.03em;margin:0;max-width:19ch;color:#fff;text-wrap:pretty">Data science, out loud.</h1>
+      <p style="font-size:19px;line-height:1.6;color:#a7b0bb;max-width:60ch;margin:24px 0 0;text-wrap:pretty">The Master's of Computer and Data Science at UL FRI, and the community that has grown around it since 2018 — meetups, workshops, a student project competition, and companies that show up in person.</p>
+      <div style="display:flex;gap:12px;margin-top:32px;flex-wrap:wrap">
+        <a href="#" onClick="{{ goEvents }}" style="padding:14px 22px;border-radius:7px;background:#008AFF;color:#fff;font-size:15px;font-weight:700;text-decoration:none">What's on this month</a>
+        <a href="#" onClick="{{ goMasters }}" style="padding:14px 22px;border-radius:7px;border:1px solid #2a3240;background:#151b24;color:#e8eaee;font-size:15px;font-weight:600;text-decoration:none">The Master's →</a>
+      </div>
+    </section>
+
+    <section style="max-width:1240px;margin:0 auto;padding:0 28px 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));grid-auto-rows:auto;gap:18px">
+      <div style="grid-row:span 2;border:1px solid #212936;border-radius:16px;background:#151b24;padding:28px 30px 30px">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px">
+          <span style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#6b7480">Next six weeks</span>
+          <a href="#" onClick="{{ goEvents }}" style="font-size:13px;font-weight:600">Open calendar →</a>
+        </div>
+        <sc-for list="{{ upcoming }}" as="e" hint-placeholder-count="5">
+          <a href="#" onClick="{{ goEvents }}" style="display:grid;grid-template-columns:64px 1fr auto;gap:18px;align-items:center;padding:16px 12px;margin:0 -12px;border-top:1px solid #1e2530;text-decoration:none;color:inherit;border-radius:8px" style-hover="background:#1a2130">
+            <div style="text-align:center">
+              <div style="font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#6b7480">{{ e.mon }}</div>
+              <div style="font-family:'Lora',Georgia,serif;font-size:26px;font-weight:600;line-height:1.05;color:#fff">{{ e.day }}</div>
+            </div>
+            <div>
+              <div style="font-size:16px;font-weight:600;line-height:1.32;color:#e8eaee;text-wrap:pretty">{{ e.title }}</div>
+              <div style="font-size:13px;color:#8b949e;margin-top:4px">{{ e.meta }}</div>
+            </div>
+            <span style="font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:{{ e.tagFg }};border:1px solid {{ e.tagBorder }};background:{{ e.tagBg }};padding:5px 9px;border-radius:100px;white-space:nowrap">{{ e.kind }}</span>
+          </a>
+        </sc-for>
+      </div>
+
+      <a href="#" onClick="{{ goMasters }}" style="border:1px solid #212936;border-radius:16px;background:linear-gradient(160deg,#0d2b4a,#12171f 70%);padding:30px;text-decoration:none;color:inherit;display:flex;flex-direction:column;min-height:230px" style-hover="border-color:#008AFF">
+        <span style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#4da3ff">The programme</span>
+        <h2 style="font-family:'Lora',Georgia,serif;font-size:30px;font-weight:600;letter-spacing:-.02em;line-height:1.14;margin:14px 0 0;color:#fff;text-wrap:pretty">Two years. 120 ECTS. One thesis that gets read.</h2>
+        <p style="font-size:14.5px;line-height:1.6;color:#a7b0bb;margin:12px 0 0;text-wrap:pretty">Applications for 2027/28 open in February.</p>
+        <span style="margin-top:auto;padding-top:20px;font-size:14px;font-weight:700;color:#4da3ff">Programme details →</span>
+      </a>
+
+      <div style="border:1px solid #212936;border-radius:16px;background:#151b24;padding:28px 30px">
+        <span style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#6b7480">Since 2018</span>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,130px),1fr));gap:22px 18px;margin-top:20px">
+          <sc-for list="{{ stats }}" as="s" hint-placeholder-count="4">
+            <div>
+              <div style="font-family:'Lora',Georgia,serif;font-size:32px;font-weight:600;line-height:1;color:#fff;letter-spacing:-.02em">{{ s.n }}</div>
+              <div style="font-size:12.5px;color:#8b949e;margin-top:6px;line-height:1.4">{{ s.label }}</div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </section>
+
+    <section style="max-width:1240px;margin:0 auto;padding:34px 28px 20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,270px),1fr));gap:18px">
+      <sc-for list="{{ news }}" as="n" hint-placeholder-count="3">
+        <article style="border:1px solid #212936;border-radius:16px;background:#151b24;overflow:hidden;display:flex;flex-direction:column">
+          <div style="height:126px;background:{{ n.artBg }};display:flex;align-items:flex-end;padding:13px;border-bottom:1px solid #212936">
+            <span style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:10.5px;letter-spacing:.06em;color:#6b7480">{{ n.art }}</span>
+          </div>
+          <div style="padding:22px;display:flex;flex-direction:column;flex:1">
+            <div style="display:flex;gap:10px;align-items:center">
+              <span style="font-size:10.5px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:{{ n.tagFg }}">{{ n.kind }}</span>
+              <span style="font-size:12.5px;color:#6b7480">{{ n.date }}</span>
+            </div>
+            <h3 style="font-family:'Lora',Georgia,serif;font-size:20px;font-weight:600;line-height:1.28;margin:11px 0 0;color:#fff;text-wrap:pretty">{{ n.title }}</h3>
+            <p style="font-size:14.2px;line-height:1.58;color:#a7b0bb;margin:10px 0 0;text-wrap:pretty">{{ n.excerpt }}</p>
+            <span style="margin-top:auto;padding-top:18px;font-size:13.5px;font-weight:700;color:#4da3ff">Read more →</span>
+          </div>
+        </article>
+      </sc-for>
+    </section>
+
+    <section style="max-width:1240px;margin:0 auto;padding:56px 28px 10px">
+      <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:20px">
+        <span style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#6b7480">Programme partners</span>
+        <a href="#" onClick="{{ goPartner }}" style="font-size:13.5px;font-weight:600">Become one →</a>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:18px">
+        <sc-for list="{{ partners }}" as="p" hint-placeholder-count="4">
+          <a href="#" onClick="{{ goPartner }}" style="border:1px solid #212936;border-radius:14px;background:#151b24;padding:24px;text-decoration:none;color:inherit;display:flex;flex-direction:column;min-height:150px" style-hover="border-color:#2f3a4a;background:#182028">
+            <span style="font-family:'Lora',Georgia,serif;font-size:20px;font-weight:600;color:#fff;letter-spacing:-.01em">{{ p.name }}</span>
+            <span style="font-size:13px;line-height:1.5;color:#8b949e;margin-top:8px;text-wrap:pretty">{{ p.what }}</span>
+            <span style="margin-top:auto;padding-top:14px;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#6b7480">{{ p.since }}</span>
+          </a>
+        </sc-for>
+      </div>
+    </section>
+  </div>
+  </sc-if>
+
+  <!-- ============ MASTER'S ============ -->
+  <sc-if value="{{ isMasters }}" hint-placeholder-val="{{ false }}">
+  <div style="max-width:1240px;margin:0 auto;padding:64px 28px 20px">
+    <div style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#4da3ff">Master's programme</div>
+    <h1 style="font-family:'Lora',Georgia,serif;font-size:clamp(33px,5vw,56px);line-height:1.05;font-weight:600;letter-spacing:-.026em;margin:16px 0 0;color:#fff;max-width:24ch;text-wrap:pretty">Master of Computer and Data Science</h1>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));gap:56px;margin-top:28px;align-items:start">
+      <div>
+        <p style="font-size:18.5px;line-height:1.62;color:#c3cad3;margin:0;text-wrap:pretty">Two years, four semesters, 120 ECTS — theoretical foundations, practical method, and hands-on work with real data. Built for students with a technical or mathematical background who intend to lead in the field, in industry or in research.</p>
+        <p style="font-size:15.5px;line-height:1.7;color:#8b949e;margin:18px 0 0;text-wrap:pretty">The programme sits inside the second-cycle Computer and Information Science degree at UL FRI. Entry is open to anyone with a completed first-cycle programme carrying sufficient technical and mathematical content. Teaching is in English.</p>
+        <div style="display:flex;gap:12px;margin-top:28px;flex-wrap:wrap">
+          <a href="https://fri.uni-lj.si/en/study-programme/data-science" style="padding:13px 20px;border-radius:7px;background:#008AFF;color:#fff;font-size:14.5px;font-weight:700;text-decoration:none">Curriculum &amp; admissions</a>
+          <a href="https://www.youtube.com/watch?v=Vve4uIMb_nY" style="padding:13px 20px;border-radius:7px;border:1px solid #2a3240;background:#151b24;color:#e8eaee;font-size:14.5px;font-weight:600;text-decoration:none">Student Q&amp;A recording</a>
+        </div>
+      </div>
+      <div style="border:1px solid #212936;border-radius:16px;background:#151b24;padding:26px">
+        <div style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#6b7480">At a glance</div>
+        <sc-for list="{{ facts }}" as="f" hint-placeholder-count="5">
+          <div style="display:flex;justify-content:space-between;gap:20px;padding:13px 0;border-bottom:1px solid #1e2530">
+            <span style="font-size:14px;color:#8b949e">{{ f.k }}</span>
+            <span style="font-size:14px;font-weight:600;text-align:right;color:#e8eaee">{{ f.v }}</span>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:18px;margin-top:56px">
+      <sc-for list="{{ semesters }}" as="s" hint-placeholder-count="4">
+        <div style="border:1px solid #212936;border-radius:16px;background:#151b24;padding:24px">
+          <div style="display:flex;align-items:baseline;gap:8px">
+            <span style="font-family:'Lora',Georgia,serif;font-size:30px;font-weight:600;color:#4da3ff;line-height:1">{{ s.n }}</span>
+            <span style="font-size:11px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:#6b7480">{{ s.label }}</span>
+          </div>
+          <h3 style="font-family:'Lora',Georgia,serif;font-size:19px;font-weight:600;margin:14px 0 0;line-height:1.3;color:#fff">{{ s.title }}</h3>
+          <p style="font-size:14px;line-height:1.55;color:#8b949e;margin:9px 0 0;text-wrap:pretty">{{ s.body }}</p>
+        </div>
+      </sc-for>
+    </div>
+
+    <div style="margin-top:56px;border:1px solid #1d3a58;border-radius:18px;background:linear-gradient(150deg,#0d2b4a,#141a22 75%);padding:40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:32px;align-items:center">
+      <div>
+        <h3 style="font-family:'Lora',Georgia,serif;font-size:28px;font-weight:600;margin:0;color:#fff;letter-spacing:-.018em">Meet the cohort before you apply</h3>
+        <p style="font-size:15.5px;line-height:1.6;color:#a7b0bb;margin:10px 0 0;max-width:62ch;text-wrap:pretty">Most applicants first meet current students at a Spark session. It is free, informal, and the fastest way to find out what the two years really look like.</p>
+      </div>
+      <a href="#" onClick="{{ goEvents }}" style="padding:14px 22px;border-radius:7px;background:#008AFF;color:#fff;font-size:15px;font-weight:700;text-decoration:none;white-space:nowrap">See upcoming events</a>
+    </div>
+  </div>
+  </sc-if>
+
+  <!-- ============ EVENTS ============ -->
+  <sc-if value="{{ isEvents }}" hint-placeholder-val="{{ false }}">
+  <div style="max-width:1240px;margin:0 auto;padding:64px 28px 20px">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:30px;flex-wrap:wrap">
+      <div>
+        <div style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#4da3ff">Events</div>
+        <h1 style="font-family:'Lora',Georgia,serif;font-size:clamp(32px,4.8vw,54px);line-height:1.05;font-weight:600;letter-spacing:-.026em;margin:14px 0 0;color:#fff">The calendar</h1>
+        <p style="font-size:17.5px;line-height:1.6;color:#a7b0bb;margin:16px 0 0;max-width:64ch;text-wrap:pretty">Spark sessions, workshops, partner evenings and showcases. Free, open to anyone, mostly at FRI on Večna pot 113.</p>
+      </div>
+      <div style="display:flex;gap:8px">
+        <sc-for list="{{ views }}" as="v" hint-placeholder-count="2">
+          <a href="#" onClick="{{ v.go }}" style="padding:9px 16px;border-radius:7px;font-size:13.5px;font-weight:700;text-decoration:none;border:1px solid {{ v.border }};background:{{ v.bg }};color:{{ v.fg }}">{{ v.label }}</a>
+        </sc-for>
+      </div>
+    </div>
+
+    <div style="display:flex;align-items:center;justify-content:space-between;margin:40px 0 16px">
+      <h2 style="font-family:'Lora',Georgia,serif;font-size:26px;font-weight:600;margin:0;color:#fff;letter-spacing:-.015em">{{ monthLabel }}</h2>
+      <div style="display:flex;gap:8px;align-items:center">
+        <sc-for list="{{ legend }}" as="l" hint-placeholder-count="3">
+          <div style="display:flex;align-items:center;gap:7px;margin-right:14px">
+            <span style="width:8px;height:8px;border-radius:50%;background:{{ l.color }};display:block"></span>
+            <span style="font-size:12.5px;color:#8b949e">{{ l.label }}</span>
+          </div>
+        </sc-for>
+        <a href="#" onClick="{{ prevMonth }}" style="width:34px;height:34px;border:1px solid #2a3240;border-radius:7px;display:flex;align-items:center;justify-content:center;color:#a7b0bb;text-decoration:none;background:#151b24" style-hover="border-color:#008AFF;color:#4da3ff">←</a>
+        <a href="#" onClick="{{ nextMonth }}" style="width:34px;height:34px;border:1px solid #2a3240;border-radius:7px;display:flex;align-items:center;justify-content:center;color:#a7b0bb;text-decoration:none;background:#151b24" style-hover="border-color:#008AFF;color:#4da3ff">→</a>
+      </div>
+    </div>
+
+    <sc-if value="{{ isMonthView }}" hint-placeholder-val="{{ true }}">
+    <div style="border:1px solid #212936;border-radius:16px;background:#151b24;padding:20px">
+      <div style="display:grid;grid-template-columns:repeat(7,1fr);gap:8px;margin-bottom:8px">
+        <sc-for list="{{ dows }}" as="d" hint-placeholder-count="7">
+          <div style="font-size:10.5px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:#6b7480;text-align:center">{{ d.l }}</div>
+        </sc-for>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(7,1fr);gap:8px">
+        <sc-for list="{{ cells }}" as="c" hint-placeholder-count="35">
+          <div style="min-height:104px;min-width:0;overflow-wrap:anywhere;border-radius:10px;padding:9px 10px;border:1px solid {{ c.border }};background:{{ c.bg }};display:flex;flex-direction:column">
+            <span style="font-size:12.5px;font-weight:700;color:{{ c.numColor }}">{{ c.num }}</span>
+            <sc-if value="{{ c.hasEvent }}" hint-placeholder-val="{{ false }}">
+              <div style="margin-top:7px">
+                <div style="font-size:10px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:{{ c.evColor }}">{{ c.evKind }}</div>
+                <div style="font-size:12px;line-height:1.35;font-weight:600;color:#e8eaee;margin-top:3px;text-wrap:pretty">{{ c.evLabel }}</div>
+                <div style="font-size:11px;color:#7d8794;margin-top:3px">{{ c.evTime }}</div>
+              </div>
+            </sc-if>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+    </sc-if>
+
+    <sc-if value="{{ isListView }}" hint-placeholder-val="{{ false }}">
+    <div>
+      <sc-for list="{{ listed }}" as="e" hint-placeholder-count="8">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,120px),1fr));gap:24px;align-items:center;border:1px solid #212936;border-radius:14px;background:#151b24;padding:20px 24px;margin-bottom:10px">
+          <div>
+            <div style="font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#6b7480">{{ e.mon }} {{ e.year }}</div>
+            <div style="font-family:'Lora',Georgia,serif;font-size:30px;font-weight:600;line-height:1.05;color:#fff">{{ e.day }}</div>
+          </div>
+          <div>
+            <div style="font-size:17px;font-weight:600;color:#fff;line-height:1.3;text-wrap:pretty">{{ e.title }}</div>
+            <div style="font-size:13.5px;color:#8b949e;margin-top:5px">{{ e.meta }}</div>
+          </div>
+          <span style="font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:{{ e.tagFg }};border:1px solid {{ e.tagBorder }};background:{{ e.tagBg }};padding:6px 11px;border-radius:100px;white-space:nowrap">{{ e.kind }}</span>
+        </div>
+      </sc-for>
+    </div>
+    </sc-if>
+
+    <div style="margin-top:26px;border:1px solid #212936;border-radius:16px;background:#12171f;padding:28px 30px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:28px;align-items:center">
+      <div>
+        <div style="font-size:18px;font-weight:700;color:#fff">One email per event. Nothing else.</div>
+        <div style="font-size:14px;color:#8b949e;margin-top:5px">Roughly one a month, with the date, the room, and what you need to bring.</div>
+      </div>
+      <div style="display:flex;gap:8px">
+        <input placeholder="you@example.com" style="flex:1;min-width:180px;padding:12px 14px;border:1px solid #2a3240;border-radius:7px;background:#0e1116;color:#e8eaee;font-family:'Open Sans',sans-serif;font-size:14px">
+        <button style="padding:12px 18px;border:0;border-radius:7px;background:#008AFF;color:#fff;font-size:14px;font-weight:700;font-family:'Open Sans',sans-serif;cursor:pointer">Subscribe</button>
+      </div>
+    </div>
+  </div>
+  </sc-if>
+
+  <!-- ============ COMPETITION ============ -->
+  <sc-if value="{{ isComp }}" hint-placeholder-val="{{ false }}">
+  <div style="max-width:1240px;margin:0 auto;padding:64px 28px 20px">
+    <div style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#4da3ff">Project competition</div>
+    <h1 style="font-family:'Lora',Georgia,serif;font-size:clamp(33px,5vw,56px);line-height:1.04;font-weight:600;letter-spacing:-.026em;margin:14px 0 0;color:#fff;max-width:20ch;text-wrap:pretty">Student work, judged by the people who hire.</h1>
+    <p style="font-size:18px;line-height:1.62;color:#a7b0bb;margin:20px 0 0;max-width:66ch;text-wrap:pretty">Every spring, teams from the Master's take a data science project end to end — question, data, method, result — and defend it in front of academics and partner-company practitioners.</p>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:0;margin-top:48px;border:1px solid #212936;border-radius:16px;background:#151b24;overflow:hidden">
+      <sc-for list="{{ compSteps }}" as="s" hint-placeholder-count="4">
+        <div style="padding:26px;border-right:1px solid #1e2530">
+          <div style="font-size:11px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:#4da3ff">{{ s.when }}</div>
+          <h3 style="font-family:'Lora',Georgia,serif;font-size:19px;font-weight:600;margin:11px 0 0;line-height:1.28;color:#fff">{{ s.title }}</h3>
+          <p style="font-size:14px;line-height:1.55;color:#8b949e;margin:8px 0 0;text-wrap:pretty">{{ s.body }}</p>
+        </div>
+      </sc-for>
+    </div>
+
+    <div style="display:flex;align-items:baseline;justify-content:space-between;margin:56px 0 20px">
+      <span style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#6b7480">2026 results</span>
+      <span style="font-size:13.5px;color:#8b949e">Nine teams · three prizes · June 2026</span>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:18px">
+      <sc-for list="{{ winners }}" as="w" hint-placeholder-count="3">
+        <div style="border:1px solid {{ w.border }};border-radius:16px;background:{{ w.bg }};padding:28px;display:flex;flex-direction:column;min-height:230px">
+          <div style="font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:{{ w.fg }}">{{ w.place }}</div>
+          <h3 style="font-family:'Lora',Georgia,serif;font-size:22px;font-weight:600;margin:12px 0 0;line-height:1.24;color:#fff;text-wrap:pretty">{{ w.title }}</h3>
+          <p style="font-size:14.2px;line-height:1.55;color:#a7b0bb;margin:10px 0 0;text-wrap:pretty">{{ w.body }}</p>
+          <div style="margin-top:auto;padding-top:16px;font-size:12.5px;color:#6b7480">{{ w.team }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+  </sc-if>
+
+  <!-- ============ PARTNERSHIP ============ -->
+  <sc-if value="{{ isPartner }}" hint-placeholder-val="{{ false }}">
+  <div style="max-width:1240px;margin:0 auto;padding:64px 28px 20px">
+    <div style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#4da3ff">Partnership</div>
+    <h1 style="font-family:'Lora',Georgia,serif;font-size:clamp(33px,5vw,56px);line-height:1.04;font-weight:600;letter-spacing:-.026em;margin:14px 0 0;color:#fff;max-width:22ch;text-wrap:pretty">Work with the students before they graduate.</h1>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:44px;margin-top:28px;align-items:start">
+      <div>
+        <p style="font-size:18px;line-height:1.6;color:#a7b0bb;margin:0;text-wrap:pretty">Partner companies bring real problems and real data into the programme, and meet the cohort long before the job market does. Four companies support the community today; there is room for more.</p>
+        <div style="display:grid;gap:16px;margin-top:30px">
+          <sc-for list="{{ benefits }}" as="b" hint-placeholder-count="4">
+            <div style="display:grid;grid-template-columns:28px 1fr;gap:15px;align-items:start">
+              <span style="width:28px;height:28px;border-radius:8px;background:#0d2b4a;color:#4da3ff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700">{{ b.n }}</span>
+              <div>
+                <div style="font-size:15.5px;font-weight:700;color:#fff">{{ b.title }}</div>
+                <div style="font-size:14.5px;line-height:1.55;color:#8b949e;margin-top:3px;text-wrap:pretty">{{ b.body }}</div>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+        <a href="mailto:datascience@fri.uni-lj.si" style="display:inline-block;margin-top:30px;padding:14px 22px;border-radius:7px;background:#008AFF;color:#fff;font-size:15px;font-weight:700;text-decoration:none">datascience@fri.uni-lj.si</a>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr));gap:16px">
+        <sc-for list="{{ partners }}" as="p" hint-placeholder-count="4">
+          <div style="border:1px solid #212936;border-radius:14px;background:#151b24;padding:24px;display:flex;flex-direction:column;min-height:170px">
+            <span style="font-family:'Lora',Georgia,serif;font-size:19px;font-weight:600;color:#fff">{{ p.name }}</span>
+            <span style="font-size:13px;line-height:1.5;color:#8b949e;margin-top:8px;text-wrap:pretty">{{ p.what }}</span>
+            <span style="margin-top:auto;padding-top:14px;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#6b7480">{{ p.since }}</span>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+  </sc-if>
+
+  </main>
+
+  <footer style="margin-top:76px;border-top:1px solid #1e232c;background:#0b0e12">
+    <div style="max-width:1240px;margin:0 auto;padding:48px 28px 36px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:40px">
+      <div>
+        <div style="display:flex;align-items:center;gap:10px">
+          <span style="width:9px;height:9px;border-radius:50%;background:#008AFF;display:block"></span>
+          <span style="font-family:'Lora',Georgia,serif;font-size:18px;font-weight:600;color:#fff">DataScience<span style="color:#6b7480">@</span>UL-FRI</span>
+        </div>
+        <p style="font-size:14px;line-height:1.6;color:#8b949e;margin:12px 0 0;max-width:42ch">Faculty of Computer and Information Science, University of Ljubljana. Večna pot 113, 1000 Ljubljana.</p>
+      </div>
+      <div>
+        <div style="font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:#6b7480;margin-bottom:12px">Site</div>
+        <div style="display:grid;gap:9px">
+          <sc-for list="{{ navItems }}" as="item" hint-placeholder-count="4">
+            <a href="#" onClick="{{ item.go }}" style="font-size:14px;color:#a7b0bb;text-decoration:none" style-hover="color:#4da3ff">{{ item.label }}</a>
+          </sc-for>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:#6b7480;margin-bottom:12px">Contact</div>
+        <div style="display:grid;gap:9px">
+          <a href="mailto:datascience@fri.uni-lj.si" style="font-size:14px">datascience@fri.uni-lj.si</a>
+          <a href="https://fri.uni-lj.si/en" style="font-size:14px">fri.uni-lj.si</a>
+        </div>
+      </div>
+    </div>
+    <div style="border-top:1px solid #1e232c">
+      <div style="max-width:1240px;margin:0 auto;padding:18px 28px;font-size:12.5px;color:#6b7480">© 2018–2026 DataScience@UL-FRI</div>
+    </div>
+  </footer>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:1000}}">
+const KINDS = {
+  meetup:   { fg: "#4da3ff", bg: "rgba(0,138,255,.10)", border: "#1d3a58", dot: "#008AFF" },
+  workshop: { fg: "#e0b055", bg: "rgba(224,176,85,.10)", border: "#4a3c1d", dot: "#e0b055" },
+  news:     { fg: "#9aa4b0", bg: "rgba(154,164,176,.09)", border: "#2a3240", dot: "#8b949e" },
+  showcase: { fg: "#4da3ff", bg: "rgba(0,138,255,.10)", border: "#1d3a58", dot: "#008AFF" }
+};
+
+const EVENTS = [
+  { d: "2026-10-06", kind: "meetup",   title: "Spark sessions 009", meta: "18:00 · FRI, lecture room P22", short: "Spark 009", time: "18:00" },
+  { d: "2026-10-14", kind: "workshop", title: "Data visualisation with Vega-Altair", meta: "16:00 · Hands-on, bring a laptop", short: "Vega-Altair", time: "16:00" },
+  { d: "2026-10-22", kind: "showcase", title: "Partner evening: PredictLeads on data pipelines", meta: "17:30 · Talk and open Q&A", short: "Partner evening", time: "17:30" },
+  { d: "2026-11-05", kind: "news",     title: "Q&A for prospective Master's students", meta: "17:00 · Online and in person", short: "Applicant Q&A", time: "17:00" },
+  { d: "2026-11-18", kind: "news",     title: "Project competition 2027 opens", meta: "Team registration until 20 December", short: "Competition opens", time: "All day" },
+  { d: "2026-11-24", kind: "meetup",   title: "Spark sessions 010", meta: "18:00 · FRI, lecture room P22", short: "Spark 010", time: "18:00" },
+  { d: "2026-06-02", kind: "news",     title: "Project competition 2026 results", meta: "Nine teams, three prizes", short: "PC 2026 results", time: "All day" },
+  { d: "2026-05-25", kind: "workshop", title: "Introduction to LLM-based agents in Python", meta: "Matej Klemen", short: "LLM agents", time: "16:00" },
+  { d: "2026-04-19", kind: "meetup",   title: "Spark sessions 008", meta: "FRI, Večna pot 113", short: "Spark 008", time: "18:00" },
+  { d: "2026-04-16", kind: "workshop", title: "Predictive modelling with Python", meta: "Jure Žabkar", short: "Predictive modelling", time: "16:00" },
+  { d: "2026-03-24", kind: "meetup",   title: "Spark sessions 007", meta: "FRI, Večna pot 113", short: "Spark 007", time: "18:00" }
+];
+
+const MONTHS = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+const LABEL = { meetup: "Meetup", workshop: "Workshop", news: "News", showcase: "Showcase" };
+
+class Component extends DCLogic {
+  state = { page: "home", ym: "2026-10", view: "Month" };
+
+  go(page) { return (e) => { if (e) e.preventDefault(); this.setState({ page }); window.scrollTo(0, 0); }; }
+
+  shiftMonth(delta) {
+    return (e) => {
+      if (e) e.preventDefault();
+      const [y, m] = this.state.ym.split("-").map(Number);
+      const dt = new Date(y, m - 1 + delta, 1);
+      this.setState({ ym: dt.getFullYear() + "-" + String(dt.getMonth() + 1).padStart(2, "0") });
+    };
+  }
+
+  decorate(e) {
+    const k = KINDS[e.kind];
+    const dt = new Date(e.d + "T12:00:00");
+    return {
+      ...e,
+      kind: LABEL[e.kind],
+      tagFg: k.fg, tagBg: k.bg, tagBorder: k.border,
+      mon: MONTHS[dt.getMonth()].slice(0, 3),
+      day: dt.getDate(),
+      year: dt.getFullYear(),
+      date: MONTHS[dt.getMonth()].slice(0, 3) + " " + dt.getDate() + ", " + dt.getFullYear()
+    };
+  }
+
+  renderVals() {
+    const { page, ym, view } = this.state;
+    const nav = [["Master's","masters"],["Events","events"],["Competition","competition"],["Partnership","partnership"]];
+    const [y, m] = ym.split("-").map(Number);
+    const first = new Date(y, m - 1, 1);
+    const lead = (first.getDay() + 6) % 7;
+    const daysIn = new Date(y, m, 0).getDate();
+    const blank = { bg: "#12171f", border: "#1a2029", numColor: "#4a525e", hasEvent: false };
+    const cells = [];
+    for (let i = 0; i < lead; i++) cells.push({ ...blank, num: new Date(y, m - 1, -lead + i + 1).getDate() });
+    for (let d = 1; d <= daysIn; d++) {
+      const iso = y + "-" + String(m).padStart(2, "0") + "-" + String(d).padStart(2, "0");
+      const ev = EVENTS.find((e) => e.d === iso);
+      const k = ev ? KINDS[ev.kind] : null;
+      cells.push({
+        num: d,
+        bg: ev ? k.bg : "#171d26",
+        border: ev ? k.border : "#1e2530",
+        numColor: ev ? k.fg : "#8b949e",
+        hasEvent: !!ev,
+        evKind: ev ? LABEL[ev.kind] : "",
+        evLabel: ev ? ev.short : "",
+        evTime: ev ? ev.time : "",
+        evColor: ev ? k.fg : "#8b949e"
+      });
+    }
+    let tail = 1;
+    while (cells.length % 7 !== 0) cells.push({ ...blank, num: tail++ });
+
+    const upcoming = EVENTS.filter((e) => e.d >= "2026-09-01").sort((a, b) => (a.d < b.d ? -1 : 1)).slice(0, 5).map((e) => this.decorate(e));
+    const listed = EVENTS.slice().sort((a, b) => (a.d < b.d ? 1 : -1)).map((e) => this.decorate(e));
+    const views = ["Month", "List"].map((label) => {
+      const on = view === label;
+      return {
+        label, bg: on ? "#008AFF" : "#151b24", fg: on ? "#fff" : "#a7b0bb",
+        border: on ? "#008AFF" : "#2a3240",
+        go: (e) => { if (e) e.preventDefault(); this.setState({ view: label }); }
+      };
+    });
+
+    return {
+      isHome: page === "home", isMasters: page === "masters", isEvents: page === "events",
+      isComp: page === "competition", isPartner: page === "partnership",
+      goHome: this.go("home"), goMasters: this.go("masters"), goEvents: this.go("events"),
+      goComp: this.go("competition"), goPartner: this.go("partnership"),
+      navItems: nav.map(([label, key]) => ({
+        label, go: this.go(key),
+        color: page === key ? "#fff" : "#a7b0bb",
+        bg: page === key ? "#1c242f" : "transparent"
+      })),
+      ticker: [
+        { kind: "Next", fg: "#4da3ff", text: "Spark sessions 009 — 6 October, 18:00, room P22" },
+        { kind: "Workshop", fg: "#e0b055", text: "Data visualisation with Vega-Altair — 14 October" },
+        { kind: "Applications", fg: "#9aa4b0", text: "Master's 2027/28 applications open in February" },
+        { kind: "Results", fg: "#4da3ff", text: "Project competition 2026 — nine teams, three prizes" },
+        { kind: "Next", fg: "#4da3ff", text: "Spark sessions 009 — 6 October, 18:00, room P22" },
+        { kind: "Workshop", fg: "#e0b055", text: "Data visualisation with Vega-Altair — 14 October" },
+        { kind: "Applications", fg: "#9aa4b0", text: "Master's 2027/28 applications open in February" },
+        { kind: "Results", fg: "#4da3ff", text: "Project competition 2026 — nine teams, three prizes" }
+      ],
+      upcoming, listed, views,
+      isMonthView: view === "Month", isListView: view === "List",
+      monthLabel: MONTHS[m - 1] + " " + y,
+      prevMonth: this.shiftMonth(-1), nextMonth: this.shiftMonth(1),
+      cells,
+      dows: ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"].map((l) => ({ l })),
+      legend: [
+        { label: "Meetup", color: "#008AFF" },
+        { label: "Workshop", color: "#e0b055" },
+        { label: "Announcement", color: "#8b949e" }
+      ],
+      stats: [
+        { n: "120", label: "ECTS across two years" },
+        { n: "10+", label: "Events every year" },
+        { n: "4", label: "Industry partners" },
+        { n: "9", label: "Competition teams in 2026" }
+      ],
+      news: [
+        { kind: "News", tagFg: "#9aa4b0", date: "Jun 2, 2026", title: "Project competition 2026 results", excerpt: "Nine teams presented to a panel of academics and partner practitioners. Three prizes awarded.", art: "photo — award ceremony", artBg: "repeating-linear-gradient(135deg,#1a212b,#1a212b 8px,#151b24 8px,#151b24 16px)" },
+        { kind: "Workshop", tagFg: "#e0b055", date: "May 25, 2026", title: "Introduction to LLM-based agents in Python", excerpt: "Matej Klemen walked through tool use, planning loops, and where agents quietly fail.", art: "photo — workshop room", artBg: "repeating-linear-gradient(135deg,#221d14,#221d14 8px,#1a1610 8px,#1a1610 16px)" },
+        { kind: "Meetup", tagFg: "#4da3ff", date: "Apr 19, 2026", title: "Spark sessions 008", excerpt: "Two talks and an open floor: geospatial pipelines, and evaluating retrieval quality in practice.", art: "photo — meetup crowd", artBg: "repeating-linear-gradient(135deg,#132132,#132132 8px,#101a26 8px,#101a26 16px)" }
+      ],
+      partners: [
+        { name: "PredictLeads", what: "Company data and signals at scale", since: "Partner since 2019" },
+        { name: "in516ht", what: "Analytics and BI consultancy", since: "Partner since 2020" },
+        { name: "Medius", what: "Data platforms for enterprise", since: "Partner since 2018" },
+        { name: "Outbrain", what: "Recommendation at web scale", since: "Partner since 2021" }
+      ],
+      facts: [
+        { k: "Duration", v: "2 years, full-time" },
+        { k: "Workload", v: "4 × 30 ECTS = 120" },
+        { k: "Degree", v: "MSc Computer and Data Science" },
+        { k: "Faculty", v: "UL FRI, Ljubljana" },
+        { k: "Language", v: "English" }
+      ],
+      semesters: [
+        { n: "1", label: "Semester", title: "Foundations", body: "Statistics, machine learning and data engineering put on a common footing across a mixed cohort." },
+        { n: "2", label: "Semester", title: "Methods", body: "Deep learning, causal inference, visualisation, and electives toward your own direction." },
+        { n: "3", label: "Semester", title: "Applied work", body: "Project courses on partner data, the project competition, and your thesis proposal." },
+        { n: "4", label: "Semester", title: "Thesis", body: "A supervised thesis, often co-supervised with a partner company or a research group." }
+      ],
+      compSteps: [
+        { when: "November", title: "Teams register", body: "Two to four students per team; any topic with a defensible data question." },
+        { when: "Dec – April", title: "Work and mentoring", body: "Each team gets an academic mentor and, where relevant, a partner contact." },
+        { when: "May", title: "Presentations", body: "Ten minutes per team plus questions, before a mixed academic-industry panel." },
+        { when: "June", title: "Results", body: "Prizes, published abstracts, and posters in the FRI atrium for the rest of the year." }
+      ],
+      winners: [
+        { place: "First place", title: "Forecasting bike-share demand across Ljubljana", body: "Weather, events and station-level history combined into a next-hour demand model.", team: "Team of three · 2026", bg: "linear-gradient(150deg,#0d2b4a,#141a22 78%)", border: "#1d3a58", fg: "#4da3ff" },
+        { place: "Second place", title: "Detecting anomalies in district heating data", body: "An unsupervised approach on sensor streams from a Slovenian utility.", team: "Team of four · 2026", bg: "#151b24", border: "#212936", fg: "#9aa4b0" },
+        { place: "Third place", title: "Reading Slovenian legal texts with LLMs", body: "Retrieval and evaluation pipeline for questions over public legislation.", team: "Team of two · 2026", bg: "#151b24", border: "#212936", fg: "#9aa4b0" }
+      ],
+      benefits: [
+        { n: "1", title: "A problem worth solving", body: "Put a real question and a real dataset in front of a competition team or a thesis student." },
+        { n: "2", title: "Hiring, earlier", body: "Meet the whole cohort at meetups and at the competition — before anyone sends a CV." },
+        { n: "3", title: "Teach what you know", body: "Run a hands-on workshop or a talk on the tooling your team actually uses." },
+        { n: "4", title: "Visibility in the community", body: "Your name on the programme, the site, and every event you support." }
+      ]
+    };
+  }
+}
+
+</script>
+</body>
+</html>

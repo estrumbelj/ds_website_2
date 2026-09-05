@@ -1,0 +1,16 @@
+# The "Three ways in" cards on the home page.
+- eyebrow: For students
+  title: Study data science
+  body: A two-year Master's built on theoretical foundations, practical methods, and hands-on work with real data.
+  cta: Programme details
+  url: /masters/
+- eyebrow: For everyone
+  title: Come to a session
+  body: Meetups, hands-on workshops, talks. Free and open to everyone.
+  cta: See the calendar
+  url: /events/
+- eyebrow: For companies
+  title: Partner with us
+  body: Bring a problem, meet the students, sponsor the project competition, co-supervise a Master's thesis.
+  cta: How partnership works
+  url: /partnership/

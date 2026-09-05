@@ -1,0 +1,52 @@
+{{ define "main" }}
+<div class="section page-hero pb-20">
+  <div class="split">
+    <div>
+      <p class="eyebrow">{{ .Params.eyebrow }}</p>
+      <h1>{{ .Params.heading | default .Title }}</h1>
+      <p class="page-hero__lede">{{ .Params.lede }}</p>
+      <div class="prose mt-26">{{ .Content }}</div>
+      {{- with .Params.links }}
+      <div class="hero__actions">
+        {{- range . }}
+        <a class="btn btn-md {{ cond .primary "btn-primary" "btn-secondary" }}" href="{{ .url }}" rel="noopener">{{ .label }}</a>
+        {{- end }}
+      </div>
+      {{- end }}
+    </div>
+
+    <div class="facts">
+      <div class="kicker">At a glance</div>
+      {{- range hugo.Data.masters.facts }}
+      <div class="facts__row">
+        <span class="facts__k">{{ .k }}</span>
+        <span class="facts__v">{{ .v }}</span>
+      </div>
+      {{- end }}
+      <p class="facts__note">Teaching is in English. Slovenian and international applicants follow the same admissions route through the faculty.</p>
+    </div>
+  </div>
+
+  <h2 class="section-label mt-70">How the two years run</h2>
+  <div class="tile-grid mt-26">
+    {{- range hugo.Data.masters.semesters }}
+    <div class="tile">
+      <div class="tile__head">
+        <span class="tile__n">{{ .n }}</span>
+        <span class="kicker">{{ .label }}</span>
+      </div>
+      <h3>{{ .title }}</h3>
+      <p>{{ .body }}</p>
+    </div>
+    {{- end }}
+  </div>
+
+  <div class="callout mt-70">
+    <div>
+      <h2>Thinking about applying?</h2>
+      <p>Come to a meetup before you decide. Most of our applicants meet current students at a Spark session first — it is the least formal way to find out what the two years actually look like.</p>
+    </div>
+    <a class="btn btn-primary" href="{{ "events/" | relURL }}">See upcoming events</a>
+  </div>
+</div>
+{{ end }}

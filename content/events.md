@@ -1,27 +1,9 @@
-### Spark sessions
-------
+---
+title: "Events"
+layout: events
+eyebrow: "Events"
+heading: "What's on"
+lede: "Meetups, hands-on workshops, and talks spanning the broader field of data science."
+---
 
-![](/img/spark_sessions_logo.png)
-
-The Spark sessions are a recurring event designed to facilitate the exchange of ideas and inspiration. The event consists of several snappy presentations, followed by a casual gathering with refreshments.
-
-Interested in giving a talk? [Apply here](/spark/)!
-
-**Our Spark sessions partners**
-
-[![FPA Logo](/img/fpa_logo.png)](https://www.planetgv.si/forum-podatkovne-analitike/)
-
-**Spark session history**
-
-{{< spark-links >}}
-
-### Workshops
-------
-
-Workshops are organized periodically and on demand (at UL-FRI or on-site). To arrange a workshop or for more information please contact us at [datascience@fri.uni-lj.si](mailto:datascience@fri.uni-lj.si).
-
-To learn about all upcoming Workshops subscribe to our Newsletter below.
-
-**Workshop history**
-
-{{< workshop-links >}}
+Want to organise an event with us, give a talk, or run a workshop? [Get in touch](mailto:datascience@fri.uni-lj.si).

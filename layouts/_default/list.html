@@ -1,0 +1,29 @@
+{{ define "main" }}
+{{- $events := partial "func/events.html" . -}}
+<div class="archive">
+  <p class="eyebrow">Archive</p>
+  <h1 style="font-size:clamp(31px,4.6vw,50px);line-height:1.08;letter-spacing:-.02em;margin:16px 0 0">News &amp; events</h1>
+  <p class="page-hero__lede">Everything we have run and announced since {{ site.Params.since }} — {{ len $events }} entries in all.</p>
+
+  <div class="archive__list">
+    {{- range $events }}
+    {{- if .hasBody }}
+    <a class="newsrow" href="{{ .url }}">
+    {{- else }}
+    <div class="newsrow">
+    {{- end }}
+      <div class="newsrow__when">
+        <span class="newsrow__date">{{ .pretty }}</span>
+        <span class="tag" style="color:{{ .fg }}">{{ .label }}</span>
+      </div>
+      <div class="newsrow__body">
+        <h2 class="newsrow__title">{{ .display }}</h2>
+        {{- with .excerpt }}<p class="newsrow__excerpt">{{ . }}</p>
+        {{- else }}{{ with .meta }}<p class="newsrow__excerpt">{{ . }}</p>{{ end }}{{ end }}
+      </div>
+    {{- if .hasBody }}</a>{{ else }}</div>{{ end }}
+    {{- end }}
+  </div>
+</div>
+{{ partial "subscribe.html" . }}
+{{ end }}

@@ -5,9 +5,6 @@ draft: false
 type: "meetup"
 ---
 
-#### Spark sessions 005
-------
-
 __When?__ November 18 2025 at 18:00.
 
 __Where?__ Faculty of Computer and Information Science, Večna pot 113, Ljubljana.

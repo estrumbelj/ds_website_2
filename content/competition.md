@@ -1,15 +1,15 @@
-### Data science Project competition
-------
+---
+title: "Competition"
+layout: competition
+eyebrow: "Project competition"
+heading: "Where coursework meets industry."
+lede: "The DataScience@UL-FRI Project Competition is an annual competition whose main goal is to connect students, academics and industry. Over the course of a semester, teams of students work on real-world data science problems guided by co-supervisors from academia and industry."
+---
 
-The DataScience@UL-FRI Project Competition is an annual competition whose main goal is to connect students, academics, and industry. Over the course of a semester teams of students work on real-world data science problems guided by co-supervisors from academia and industry. The best teams are invited to present their work at the competition finals. The competition allows companies to showcase their challenges to academics and gives students the opportunity to gain hands-on experience in a structured but fun way.
+## Project Competition 2027
 
-#### Project Competition 2026
+Details for the 2027 edition — team registration, topics, and key dates — are yet to be announced.
 
-This year's competition is closed to external participants.
-
-[DataScience@UL-FRI Project Competition 2026 Topics](/news/pc2026topics/)
-
-#### Project Competition History
-------
+## Competition history
 
 {{< pc-links >}}

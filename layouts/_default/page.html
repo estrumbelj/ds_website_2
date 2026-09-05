@@ -1,0 +1,27 @@
+{{ define "main" }}
+{{- if eq .Section "news" }}
+  {{- $kinds := dict
+    "meetup"      (dict "label" "Meetup"      "fg" "#EF1209")
+    "workshop"    (dict "label" "Workshop"    "fg" "#4d4d4d")
+    "news"        (dict "label" "News"        "fg" "#767676")
+    "competition" (dict "label" "Competition" "fg" "#767676") -}}
+  {{- $k := index $kinds (lower (default "news" .Params.type)) -}}
+  {{- if not $k }}{{ $k = index $kinds "news" }}{{ end }}
+<div class="article">
+  <div class="article__meta">
+    <span class="tag" style="color:{{ $k.fg }}">{{ $k.label }}</span>
+    <span class="article__date">{{ .Date.Format "2 January 2006" }}</span>
+  </div>
+  <h1>{{ .Title }}</h1>
+  <div class="prose">{{ .Content }}</div>
+  <a class="article__back" href="{{ "news/" | relURL }}">← All news &amp; events</a>
+</div>
+{{- else }}
+<div class="article">
+  {{- with .Params.eyebrow }}<p class="eyebrow">{{ . }}</p>{{ end }}
+  <h1>{{ .Title }}</h1>
+  {{- with .Params.lede }}<p class="page-hero__lede" style="margin-top:-10px">{{ . }}</p>{{ end }}
+  <div class="prose mt-26">{{ .Content }}</div>
+</div>
+{{- end }}
+{{ end }}

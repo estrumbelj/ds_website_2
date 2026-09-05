@@ -1,0 +1,18 @@
+# Industry partners shown on the home page and the partnership page.
+# `logo` is a path under static/.
+- name: PredictLeads
+  what: Company data and buying-intent signals at scale
+  logo: partners/partner_PredictLeads.png
+  url: https://predictleads.com/
+- name: In516ht
+  what: Data consulting, analytics and cloud data warehousing
+  logo: partners/partner_in516ht.png
+  url: https://www.in516ht.com/
+- name: Medius
+  what: Machine learning and data-driven software engineering
+  logo: partners/partner_medius.png
+  url: https://medius.si/
+- name: Teads
+  what: Media and advertising technology at web scale
+  logo: partners/partner_teads.png
+  url: https://www.teads.com/
