@@ -10,23 +10,3 @@ facts:
     v: UL FRI, Ljubljana
   - k: Entry
     v: First-cycle technical degree
-
-# Structure of the programme. Course-level detail lives in the official
-# curriculum on fri.uni-lj.si — keep these descriptions structural.
-semesters:
-  - n: "1"
-    label: Semester
-    title: "30 ECTS"
-    body: Coursework starts with the compulsory courses of the Data Science module, taken alongside electives from across the faculty.
-  - n: "2"
-    label: Semester
-    title: "30 ECTS"
-    body: Further coursework and electives, chosen to steer the degree toward your own direction.
-  - n: "3"
-    label: Semester
-    title: "30 ECTS"
-    body: Applied and project work, running in parallel with the annual project competition and the thesis proposal.
-  - n: "4"
-    label: Semester
-    title: "30 ECTS"
-    body: The Master's thesis, supervised at the faculty and often co-supervised with a partner company or research group.

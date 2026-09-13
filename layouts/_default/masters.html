@@ -26,27 +26,5 @@
       <p class="facts__note">Teaching is in English. Slovenian and international applicants follow the same admissions route through the faculty.</p>
     </div>
   </div>
-
-  <h2 class="section-label mt-70">How the two years run</h2>
-  <div class="tile-grid mt-26">
-    {{- range hugo.Data.masters.semesters }}
-    <div class="tile">
-      <div class="tile__head">
-        <span class="tile__n">{{ .n }}</span>
-        <span class="kicker">{{ .label }}</span>
-      </div>
-      <h3>{{ .title }}</h3>
-      <p>{{ .body }}</p>
-    </div>
-    {{- end }}
-  </div>
-
-  <div class="callout mt-70">
-    <div>
-      <h2>Thinking about applying?</h2>
-      <p>Come to a meetup before you decide. Most of our applicants meet current students at a Spark session first — it is the least formal way to find out what the two years actually look like.</p>
-    </div>
-    <a class="btn btn-primary" href="{{ "events/" | relURL }}">See upcoming events</a>
-  </div>
 </div>
 {{ end }}

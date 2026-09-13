@@ -25,7 +25,7 @@ change is live within a minute or two.
 | `content/spark.md` | Spark sessions talk application form (posts to Netlify Forms) |
 | `data/partners.yaml` | Industry partners shown on the home page and `/partnership/` — name, blurb, logo path, link |
 | `data/paths.yaml` | The "Three ways in" cards on the home page |
-| `data/masters.yaml` | The Master's page's "at a glance" facts table and semester tiles |
+| `data/masters.yaml` | The Master's page's "at a glance" facts table |
 | `data/partnership.yaml` | The four partnership benefits listed on `/partnership/` |
 | `data/competition.yaml` | The competition's "how it runs" timeline steps only — results/winners come from `content/news/`, see below |
 | `layouts/` | Templates. `_default/page.html` renders both news articles and plain pages |
