@@ -3,6 +3,27 @@ title: "Project competition 2026 results"
 date: 2026-06-02
 draft: false
 type: "news"
+winners:
+  - place: First place
+    title: Slovenian-Language OCR Benchmark
+    partner: DS@FRI
+    team: Tjaš Ajdovec, Gal Dvoršak, Denis Nedić
+  - place: Second place
+    title: Detecting and extracting multiple logos from a single image
+    partner: PredictLeads
+    team: Dimitar Djorlev, Petar Mishov, Hristijan Jovanoski
+  - place: Third place
+    title: Optimizing manufacturing processes with explainable AI
+    partner: Medius
+    team: Erika Rosenfeld, Caio Simon, Diana Catana
+  - place: Fourth place
+    title: AI-powered intelligent quote intake
+    partner: In516ht
+    team: Guillem Masdemont, Plabon Shaha
+  - place: Fifth place
+    title: Quantifying and tracking changes in company landing pages
+    partner: PredictLeads
+    team: Aleksa Sibinović, Sara Ivanovska, Hristijan Milanovski
 ---
 
 In the first week of June, we concluded the 2026 DataScience@UL-FRI Project Competition. Again, a big thank you to everyone who was a part of this competition, from students to faculty and industry advisors. A special mention goes to our sponsors: In516ht, Medius, Teads, and PredictLeads. There would be no competition without you!

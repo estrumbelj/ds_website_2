@@ -1,0 +1,94 @@
+{{- /*
+  Normalizes every page in content/news into a uniform event record used by the
+  home page, the events calendar/list and the news archive.
+
+  Front matter honoured (all optional):
+    type      meetup | workshop | news | competition   (default: news)
+    time      start time, e.g. "18:00" -- prepended to meta when set
+    short     label shown inside a calendar cell
+    meta      one line of practical detail (room, presenter); time is
+              prepended to this automatically when the time field is set
+    register  URL of a registration/ticket page
+    cta       label for the registration button
+*/ -}}
+
+{{- $kinds := dict
+  "meetup"      (dict "label" "Meetup"      "family" "meetup"   "fg" "#EF1209" "bg" "#fdeff0" "border" "#f6d2d5")
+  "workshop"    (dict "label" "Workshop"    "family" "workshop" "fg" "#4d4d4d" "bg" "#f2f2f2" "border" "#e0e0e0")
+  "news"        (dict "label" "News"        "family" "news"     "fg" "#767676" "bg" "#f7f7f7" "border" "#e0e0e0")
+  "competition" (dict "label" "Competition" "family" "news"     "fg" "#767676" "bg" "#f7f7f7" "border" "#e0e0e0")
+-}}
+
+{{- $items := slice -}}
+{{- range (where site.RegularPages "Section" "news").ByDate.Reverse -}}
+  {{- $kind := lower (default "news" .Params.type) -}}
+  {{- $k := index $kinds $kind -}}
+  {{- if not $k }}{{ $k = index $kinds "news" }}{{ end -}}
+
+  {{- /* Short calendar label */ -}}
+  {{- $short := .Params.short -}}
+  {{- if not $short -}}
+    {{- $t := .Title -}}
+    {{- if strings.Contains $t " by " -}}
+      {{- $t = index (split $t " by ") 0 -}}
+    {{- end -}}
+    {{- $short = replace $t "Spark sessions " "Spark " -}}
+    {{- $short = replace $short "Project competition" "PC" -}}
+    {{- $short = truncate 30 $short -}}
+  {{- end -}}
+
+  {{- /* One line of practical detail */ -}}
+  {{- $meta := .Params.meta -}}
+  {{- if not $meta -}}
+    {{- if and (eq $kind "workshop") (strings.Contains .Title " by ") -}}
+      {{- $meta = index (last 1 (split .Title " by ")) 0 -}}
+    {{- else if eq $kind "meetup" -}}
+      {{- $meta = "FRI, Večna pot 113, Ljubljana" -}}
+    {{- else -}}
+      {{- $meta = "" -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- /* Start time, prepended to the detail line when set */ -}}
+  {{- $time := .Params.time -}}
+  {{- if $time -}}
+    {{- if $meta -}}
+      {{- $meta = printf "%s · %s" $time $meta -}}
+    {{- else -}}
+      {{- $meta = $time -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- /* Title as shown in cards: workshops drop the trailing "by <presenter>" */ -}}
+  {{- $display := .Title -}}
+  {{- if and (eq $kind "workshop") (strings.Contains .Title " by ") -}}
+    {{- $display = index (split .Title " by ") 0 -}}
+  {{- end -}}
+
+  {{- $items = $items | append (dict
+      "iso"      (.Date.Format "2006-01-02")
+      "date"     .Date
+      "kind"     $kind
+      "family"   $k.family
+      "label"    $k.label
+      "fg"       $k.fg
+      "bg"       $k.bg
+      "border"   $k.border
+      "title"    .Title
+      "display"  $display
+      "short"    $short
+      "time"     (default "" $time)
+      "meta"     $meta
+      "url"      .RelPermalink
+      "register" (default "" .Params.register)
+      "cta"      (default (cond (eq $kind "workshop") "Reserve a place" "Get tickets") .Params.cta)
+      "hasBody"  (gt (len (trim .RawContent " \n\t")) 0)
+      "excerpt"  (.Summary | plainify | truncate 190)
+      "mon"      (.Date.Format "Jan")
+      "day"      (.Date.Format "2")
+      "full"     (.Date.Format "2 January 2006")
+      "pretty"   (.Date.Format "Jan 2, 2006")
+    ) -}}
+{{- end -}}
+
+{{- return $items -}}

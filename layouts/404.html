@@ -1,0 +1,11 @@
+{{ define "main" }}
+<div class="article" style="text-align:center">
+  <p class="eyebrow">404</p>
+  <h1>That page has moved on.</h1>
+  <p class="page-hero__lede" style="margin:0 auto">The link is broken or the page no longer exists. Try the calendar, or the news archive.</p>
+  <div class="hero__actions" style="justify-content:center">
+    <a class="btn btn-primary" href="{{ "events/" | relURL }}">What's on</a>
+    <a class="btn btn-secondary" href="{{ "news/" | relURL }}">News archive</a>
+  </div>
+</div>
+{{ end }}

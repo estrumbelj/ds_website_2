@@ -1,39 +1,47 @@
 baseURL = 'https://datascience.fri.uni-lj.si/'
-languageCode = 'en-us'
+locale = 'en-us'
 title = 'DataScience@UL-FRI'
-theme = 'beautifulhugo'
-lastmod = 2026-01-01T00:00:00-00:00  
+enableRobotsTXT = true
 buildFuture = true
+summaryLength = 30
 
 [params]
-  subtitle = "Just a simple website"
-  logo = "img/avatar.png" # You can add your own logo later
+  description = "DataScience@UL-FRI runs the Master's of Computer and Data Science at the University of Ljubljana, and a year-round programme of meetups, workshops, a student project competition and industry partnerships."
+  email = "datascience@fri.uni-lj.si"
+  linkedin = "https://www.linkedin.com/company/datascience-ul-fri/"
+  faculty = "https://fri.uni-lj.si/en"
+  address = "Faculty of Computer and Information Science, University of Ljubljana. Večna pot 113, 1000 Ljubljana."
+  newsletter = "https://uni-lj.us19.list-manage.com/subscribe?u=d4508fe2de3e88c55cf59e657&id=240a6af4e5"
+  meetupUrl = "https://www.meetup.com/spark-sessions/"
   favicon = "img/favicon.png"
-  dateFormat = "January 2, 2006"
+  logo = "img/logo.png"
   since = 2018
-  year = 2026
 
-# This creates the top navigation menu
-[[menu.main]]
-    name = "Master's"
-    url = "masters/"
-    weight = 1
+[markup.goldmark.renderer]
+  unsafe = true
 
-[[menu.main]]
-    name = "Events"
-    url = "events/"
-    weight = 2
+[markup.tableOfContents]
+  startLevel = 2
+  endLevel = 3
+
+[taxonomies]
 
 [[menu.main]]
-    name = "Competition"
-    url = "competition/"
-    weight = 4   
+  name = "Master's"
+  url = "/masters/"
+  weight = 1
 
 [[menu.main]]
-    name = "Partnership"
-    url = "partnership/"
-    weight = 5
+  name = "Events"
+  url = "/events/"
+  weight = 2
 
+[[menu.main]]
+  name = "Competition"
+  url = "/competition/"
+  weight = 3
 
-
-  
+[[menu.main]]
+  name = "Partnership"
+  url = "/partnership/"
+  weight = 4

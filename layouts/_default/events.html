@@ -1,0 +1,61 @@
+{{ define "main" }}
+{{- $events := partial "func/events.html" . -}}
+<div class="section page-hero pb-20">
+  <p class="eyebrow">{{ .Params.eyebrow }}</p>
+  <h1>{{ .Params.heading | default .Title }}</h1>
+  <p class="page-hero__lede">{{ .Params.lede }}</p>
+
+  <div class="events-layout" id="events-app">
+    <div class="calendar">
+      <div class="calendar__head">
+        <h2 id="cal-month">&nbsp;</h2>
+        <div class="calendar__nav">
+          <button type="button" id="cal-prev" aria-label="Previous month">←</button>
+          <button type="button" id="cal-next" aria-label="Next month">→</button>
+        </div>
+      </div>
+      <div class="calendar__dows" aria-hidden="true">
+        <div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div><div>Sun</div>
+      </div>
+      <div class="calendar__grid" id="cal-grid"></div>
+      <p class="cal-hint">Tap a coloured day for details.</p>
+      <div id="cal-selected"></div>
+      <div class="legend">
+        <div><span class="swatch" style="background:#EF1209"></span><span class="label">Meetup</span></div>
+        <div><span class="swatch" style="background:#4d4d4d"></span><span class="label">Workshop</span></div>
+        <div><span class="swatch" style="background:#767676"></span><span class="label">Announcement</span></div>
+      </div>
+    </div>
+
+    <div class="event-list">
+      <div class="tabs" id="ev-scopes" role="tablist">
+        <button type="button" role="tab" data-scope="upcoming">What's on</button>
+        <button type="button" role="tab" data-scope="past">Past events</button>
+      </div>
+      <div class="chips" id="ev-filters">
+        <button type="button" data-filter="All">All</button>
+        <button type="button" data-filter="Meetups">Meetups</button>
+        <button type="button" data-filter="Workshops">Workshops</button>
+        <button type="button" data-filter="News">News</button>
+      </div>
+      <div id="ev-list"></div>
+      <div id="ev-pager"></div>
+      <div class="inline-subscribe">
+        <div class="inline-subscribe__t">Never miss one</div>
+        <p>One short email per event. No other mail, ever.</p>
+        <a class="btn btn-primary btn-sm" href="{{ site.Params.newsletter }}" rel="noopener">Subscribe</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="prose mt-70">{{ .Content }}</div>
+</div>
+
+<script type="application/json" id="events-data">{{ $events | jsonify | safeJS }}</script>
+{{ end }}
+
+{{ define "scripts" }}
+{{- $js := resources.Get "js/events.js" }}
+{{- if hugo.IsProduction }}{{ $js = $js | minify | fingerprint }}{{ end }}
+<script src="{{ $js.RelPermalink }}" defer></script>
+{{ end }}

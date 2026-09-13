@@ -5,9 +5,6 @@ draft: false
 type: "meetup"
 ---
 
-#### Spark sessions 008
-------
-
 The Spark Sessions are a recurring event of the Data Science Initiative at the Faculty of Computer and Information Science. They are designed to facilitate the exchange of ideas and inspiration. The event consists of several snappy (5-7 min) presentations, followed by a casual gathering with refreshments.
 
 __When?__ May 19 2026 at 18:00.

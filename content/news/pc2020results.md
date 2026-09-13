@@ -11,7 +11,7 @@ On Sep 10 we concluded the 2020 Project competition] with the finalists' present
 The competition that started in Feb 2020 and ran for 5 months saw 16 teams work on 10 different project topics motivated by problems from industry, putting in a combined effort of over 3000 hours. We are already looking forward to next year's competition!
 
 
-#### Awards
+## Awards
 -----
 
 * 1st Place Award: **David Nabergoj** - Topic modeling with active learning in the industry automation sector (in collaboration with Siemens).

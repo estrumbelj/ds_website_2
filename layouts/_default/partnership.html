@@ -1,0 +1,39 @@
+{{ define "main" }}
+<div class="section page-hero pb-20">
+  <div class="split split--tight">
+    <div>
+      <p class="eyebrow">{{ .Params.eyebrow }}</p>
+      <h1>{{ .Params.heading | default .Title }}</h1>
+      <p class="page-hero__lede">{{ .Params.lede }}</p>
+      <div class="benefits">
+        {{- range $i, $b := hugo.Data.partnership.benefits }}
+        <div class="benefit">
+          <span class="benefit__n">{{ add $i 1 }}</span>
+          <div>
+            <div class="benefit__t">{{ $b.title }}</div>
+            <div class="benefit__b">{{ $b.body }}</div>
+          </div>
+        </div>
+        {{- end }}
+      </div>
+    </div>
+
+    <div class="facts">
+      <div class="kicker">Current partners</div>
+      <div class="partners__grid" style="grid-template-columns:repeat(2,1fr);gap:12px;margin-top:16px">
+        {{- range hugo.Data.partners }}
+        <a class="partner-logo" style="min-height:80px;padding:10px" href="{{ .url }}" rel="noopener" title="{{ .name }}">
+          <img src="{{ .logo | relURL }}" alt="{{ .name }}" loading="lazy" style="max-height:46px">
+        </a>
+        {{- end }}
+      </div>
+      <div style="height:1px;background:var(--line-soft);margin:24px 0"></div>
+      <div class="benefit__t">Start a conversation</div>
+      <p style="font-size:14px;line-height:1.6;color:var(--muted);margin:8px 0 16px">Tell us what your team works on and we will suggest the lightest way in — a workshop, a competition problem, or a thesis topic.</p>
+      <a class="btn btn-primary btn-md" style="display:block;text-align:center" href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a>
+    </div>
+  </div>
+
+  <div class="prose mt-70">{{ .Content }}</div>
+</div>
+{{ end }}

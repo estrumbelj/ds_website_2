@@ -1,0 +1,16 @@
+# How a competition edition runs. (Results/winners are no longer kept here --
+# they're read directly from whichever content/news/ post has a `winners`
+# front-matter list; see layouts/_default/competition.html.)
+steps:
+  - when: January
+    title: Topics and applications
+    body: Partner companies and the faculty publish project topics; students apply and teams are formed.
+  - when: February – May
+    title: Work and mentoring
+    body: Each team works on a real problem, guided by co-supervisors from academia and industry.
+  - when: May – June
+    title: Finals
+    body: The strongest teams are invited to present their work at the competition finals.
+  - when: June
+    title: Results
+    body: A committee scores the finalists and the awards are announced.

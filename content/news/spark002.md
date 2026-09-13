@@ -5,9 +5,6 @@ draft: false
 type: "meetup"
 ---
 
-#### Spark sessions 002
-------
-
 __When?__ Dec 10 2024 at 18:00.
 
 __Where?__ Faculty of Computer and Information Science, Večna pot 113, Ljubljana.

@@ -1,7 +1,129 @@
 {{ define "main" }}
+{{- $events := partial "func/events.html" . -}}
+{{- $today := now.Format "2006-01-02" -}}
+{{- $upcoming := sort (where $events "iso" ">=" $today) "iso" -}}
+{{- $isNext := gt (len $upcoming) 0 -}}
+{{- $nextList := cond $isNext (first 4 $upcoming) (first 3 $events) -}}
 
-  {{ partial "home-intro.html" . }}
-  {{ partial "home-partners.html" . }}
-  {{ partial "home-news.html" . }}
+<div class="hero">
+  <div class="hero__shapes" aria-hidden="true">
+    <span></span><span></span><span></span><span></span>
+  </div>
+  <section class="hero__inner">
+    <div>
+      <h1>{{ .Params.heading | default "A data science community, built around a Master's degree." }}</h1>
+      <p class="hero__lede">{{ .Params.lede }}</p>
+      <div class="hero__actions">
+        <a class="btn btn-primary" href="{{ "masters/" | relURL }}">Explore the programme</a>
+        <a class="btn btn-secondary" href="{{ "events/" | relURL }}">See what's on →</a>
+      </div>
+    </div>
 
+    <div class="card nextup">
+      <div class="nextup__head">
+        <span class="kicker">{{ cond $isNext "Next up" "Latest" }}</span>
+        <a href="{{ "events/" | relURL }}">Full calendar</a>
+      </div>
+      {{- range $nextList }}
+      <a class="nextup__item" href="{{ .url }}">
+        <span class="datechip" style="background:{{ .bg }}">
+          <span class="datechip__mon" style="color:{{ .fg }}">{{ .mon }}</span>
+          <span class="datechip__day" style="color:{{ .fg }}">{{ .day }}</span>
+        </span>
+        <span>
+          <span class="tag" style="color:{{ .fg }}">{{ .label }}</span>
+          <span class="nextup__title" style="display:block">{{ .display }}</span>
+          {{- with .meta }}<span class="nextup__meta" style="display:block">{{ . }}</span>{{ end }}
+          {{- if .register }}<span class="nextup__cta">{{ .cta }} →</span>{{ end }}
+        </span>
+      </a>
+      {{- end }}
+      {{- if not $isNext }}
+      <p class="nextup__empty">Dates for upcoming events aren't out yet. Subscribe below and we'll email you the moment they are.</p>
+      {{- end }}
+    </div>
+  </section>
+</div>
+
+<section class="stats">
+  <div class="stats__grid">
+    <div>
+      <div class="stats__n">120</div>
+      <div class="stats__label">ECTS over two full-time years</div>
+    </div>
+    <div>
+      <div class="stats__n">100+</div>
+      <div class="stats__label">Workshops and meetups run so far</div>
+    </div>
+    <div>
+      <div class="stats__n">{{ len hugo.Data.partners }}</div>
+      <div class="stats__label">Industry partners in the programme</div>
+    </div>
+    <div>
+      <div class="stats__n">{{ site.Params.since }}</div>
+      <div class="stats__label">Running the community since</div>
+    </div>
+  </div>
+</section>
+
+<section class="partners">
+  <div class="partners__inner">
+    <div class="partners__head">
+      <div>
+        <h2 class="section-label">Our partners</h2>
+        <p>Our partners bring real-world challenges, data and mentors into the programme.</p>
+      </div>
+      <a class="arrow-link" href="{{ "partnership/" | relURL }}">Become a partner →</a>
+    </div>
+    <div class="partners__grid">
+      {{- range hugo.Data.partners }}
+      <a class="partner-logo" href="{{ .url }}" rel="noopener" title="{{ .name }}">
+        <img src="{{ .logo | relURL }}" alt="{{ .name }}" loading="lazy">
+      </a>
+      {{- end }}
+    </div>
+  </div>
+</section>
+
+<section class="paths">
+  <h2 class="section-label">Three ways in</h2>
+  <div class="paths__grid">
+    {{- range hugo.Data.paths }}
+    <a class="path-card" href="{{ .url | relURL }}">
+      <span class="eyebrow">{{ .eyebrow }}</span>
+      <h3>{{ .title }}</h3>
+      <p>{{ .body }}</p>
+      <span class="path-card__cta">{{ .cta }} →</span>
+    </a>
+    {{- end }}
+  </div>
+</section>
+
+<section class="recently">
+  <div class="recently__inner">
+    <div class="recently__head">
+      <h2 class="section-label">Recently</h2>
+      <a class="arrow-link" href="{{ "news/" | relURL }}">All news &amp; events →</a>
+    </div>
+    {{- range first 4 $events }}
+    {{- if .hasBody }}
+    <a class="newsrow" href="{{ .url }}">
+    {{- else }}
+    <div class="newsrow">
+    {{- end }}
+      <div class="newsrow__when">
+        <span class="newsrow__date">{{ .pretty }}</span>
+        <span class="tag" style="color:{{ .fg }}">{{ .label }}</span>
+      </div>
+      <div class="newsrow__body">
+        <h3 class="newsrow__title">{{ .display }}</h3>
+        {{- with .excerpt }}<p class="newsrow__excerpt">{{ . }}</p>
+        {{- else }}{{ with .meta }}<p class="newsrow__excerpt">{{ . }}</p>{{ end }}{{ end }}
+      </div>
+    {{- if .hasBody }}</a>{{ else }}</div>{{ end }}
+    {{- end }}
+  </div>
+</section>
+
+{{ partial "subscribe.html" . }}
 {{ end }}

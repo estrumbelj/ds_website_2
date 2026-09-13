@@ -1,8 +1,0 @@
-<ul>
-{{ $pages := where .Site.RegularPages "Section" "news" }}
-{{ range $pages }}
-  {{ if in (lower .Title) "spark sessions" }}
-    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-  {{ end }}
-{{ end }}
-</ul>

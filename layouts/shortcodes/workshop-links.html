@@ -1,8 +1,0 @@
-<ul>
-  {{ $pages := where .Site.RegularPages "Section" "news" }}
-  {{ $workshops := where $pages "Type" "workshop" }}
-  {{ $sorted := sort $workshops ".Date" "desc" }}
-  {{ range $sorted }}
-    <li>[{{ .Date.Format "Jan 2, 2006" }}] {{ .Title }}</li>
-  {{ end }}
-</ul>

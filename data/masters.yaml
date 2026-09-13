@@ -1,0 +1,12 @@
+# "At a glance" table on the Master's page.
+facts:
+  - k: Duration
+    v: 2 years, full-time
+  - k: Workload
+    v: 4 × 30 ECTS = 120
+  - k: Degree
+    v: Master of Computer and Data Science
+  - k: Faculty
+    v: UL FRI, Ljubljana
+  - k: Entry
+    v: First-cycle technical degree

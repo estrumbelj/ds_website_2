@@ -1,10 +1,10 @@
-<ul>
-{{ $pages := where .Site.RegularPages "Section" "news" }}
-{{ range $pages }}
-  {{ if in (lower .Title) "results" }}
-    {{ if in (lower .Title) "project competition" }}
-    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-  {{ end }}
-   {{ end }}
-{{ end }}
+<ul class="link-list">
+  {{- range (where site.RegularPages "Section" "news").ByDate.Reverse }}
+  {{- if and (in (lower .Title) "project competition") (in (lower .Title) "results") }}
+  <li>
+    <span class="when">{{ .Date.Format "2 Jan 2006" }}</span>
+    <span class="what"><a href="{{ .RelPermalink }}">{{ .Title }}</a></span>
+  </li>
+  {{- end }}
+  {{- end }}
 </ul>
