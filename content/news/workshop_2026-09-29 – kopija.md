@@ -1,6 +1,6 @@
 ---
 title: "test"
-date: 2026-10-21
+date: 2026-10-20
 draft: true
 type: "workshop"
 time: "16:00"
