@@ -1,0 +1,23 @@
+---
+title: "test"
+date: 2026-10-21
+draft: true
+type: "workshop"
+time: "16:00"
+meta: "test"
+register: "https://luma.com/0u9znu0g"
+---
+
+**When?** Tuesday, 29 September 2026, 16:00–20:00.
+
+**Where?** Faculty of Computer and Information Science, Večna pot 113, Ljubljana. Lecture room 03.
+
+**What?**
+
+A hands-on workshop on deploying computer vision models on edge devices, run by [Luxonis](https://www.luxonis.com/). Aimed at software developers, AI practitioners, students, and engineers — a basic understanding of neural networks is assumed, but no prior edge-deployment experience is needed.
+
+Topics covered include model conversion, quantization, calibration, operator compatibility, graph and operator fusion, performance profiling, and deployment validation, along with the trade-offs between accuracy, latency, throughput, and power consumption.
+
+Presented by Matija Teršek (CTO, Luxonis), Klemen Škrlj (leads AI development at Luxonis), and Aljaž Konec (AI team, software/firmware and system integration).
+
+Want to attend? [Register here](https://luma.com/0u9znu0g).
