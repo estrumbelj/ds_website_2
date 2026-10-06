@@ -1,23 +1,21 @@
 ---
-title: "test"
-date: 2026-10-19
-draft: true
+title: "Student workshop:Pair programming with Claude"
+date: 2026-10-21
+draft: false
 type: "workshop"
-time: "16:00"
+time: "8:30"
 meta: "test"
 register: "https://luma.com/0u9znu0g"
 ---
 
-**When?** Tuesday, 29 September 2026, 16:00–20:00.
+**When?** Wednesday, 21 October 2026, 8:30–11:30.
 
-**Where?** Faculty of Computer and Information Science, Večna pot 113, Ljubljana. Lecture room 03.
+**Where?** Faculty of Computer and Information Science, Večna pot 113, Ljubljana. Diplomska soba.
 
 **What?**
 
-A hands-on workshop on deploying computer vision models on edge devices, run by [Luxonis](https://www.luxonis.com/). Aimed at software developers, AI practitioners, students, and engineers — a basic understanding of neural networks is assumed, but no prior edge-deployment experience is needed.
+Get into the flow of AI-assisted development, without leaving good engineering practices behind. This workshop targets beginners and novice vibers. We’ll kick off with a short introduction to coding harness and model options, then dive into a hands-on vibe coding session using a public repository. Together, we’ll implement features on an existing product and explore how clear instructions, useful context, small iterations, code review, and testing help turn AI-generated code into changes you can trust. 
 
-Topics covered include model conversion, quantization, calibration, operator compatibility, graph and operator fusion, performance profiling, and deployment validation, along with the trade-offs between accuracy, latency, throughput, and power consumption.
+Presented by Luka Vranješ (Owner, Valira AI).
 
-Presented by Matija Teršek (CTO, Luxonis), Klemen Škrlj (leads AI development at Luxonis), and Aljaž Konec (AI team, software/firmware and system integration).
-
-Want to attend? [Register here](https://luma.com/0u9znu0g).
+Want to attend? [Register here](https://luma.com/qrvy8nq3).
