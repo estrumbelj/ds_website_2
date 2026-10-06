@@ -1,10 +1,10 @@
 ---
-title: "Student workshop:Pair programming with Claude"
+title: "Student workshop: Pair programming with Claude"
 date: 2026-10-21
 draft: false
 type: "workshop"
 time: "8:30"
-meta: "test"
+meta: "FRI Diplomska soba"
 register: "https://luma.com/0u9znu0g"
 ---
 
