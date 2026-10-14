@@ -27,7 +27,7 @@ by Erik Štrumbelj (Researcher, UL FRI)
 *Digital technology is deeply embedded in our everyday lives, with AI-based tools taking this integration even further. But what does this mean for how we think, learn, remember, and pay attention? I’ll give a quick tour of what research tells us about the potential negative effects of digital technology on cognition, highlighting the main cognitive domains affected, where the evidence is strongest, and where important uncertainties remain.*  
 
 __From AutoML to AgenticML: LLMs as the New SearchOperator__  
-by Sebastian Koralewski (Data Scientist,Teads) 
+by Sebastian Koralewski (Data Scientist, Teads) 
 
 *Every automated search process - tuning hyperparameters, evolving code, running a research pipeline — follows the same loop: propose a candidate → run it → read the result → decide what to try next. With the rise of LLMs, the question is no longer whether this loop can be automated, but which parts of it already can be and where a human still needs to stay in it.*
  *This talk introduces a five-level ladder that sorts systems by how much of the loop has been handed from human to model:*  
