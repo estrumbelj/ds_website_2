@@ -3,6 +3,7 @@ title: "Data Science Talks"
 date: 2026-10-27
 draft: false
 type: "meetup"
+meta: "Teads Ljubljana, Dunajska cesta 5, 1000 Ljubljana"
 ---
 
 The Data Science Talks are a recurring event of the Data Science Initiative at the Faculty of Computer and Information Science. They are designed to facilitate the exchange of ideas and inspiration. The event consists of several snappy (5-7 min) presentations, followed by a casual gathering with refreshments.
