@@ -44,6 +44,11 @@ by Damjan Fujs (Assistant Professor, UL FRI)
 *Generative AI is reshaping software development and software engineering education. Drawing on experiences from project-based teaching and recent research on student teams, this talk explores how AI changes the entire development lifecycle, from requirements engineering to deployment. Using findings on the gap between students’ perceived usefulness of LLM and their actual usage, I discuss emerging developer skills, the future of development teams, and challenges for education and industry.*  
 
 
+__One Model to Price Them All?__  
+by Barbara Lipnik (Data Scientist, Reduxi) 
+
+*Europe doesn't have one electricity price, but dozens. Every bidding zone sets its own prices for every hour of tomorrow in a daily auction. To schedule hundreds of batteries we forecast them all. Norway runs on hydro, Poland on coal, Spain on wind and solar, so a separate model tailored to each market seems like the sensible choice. But is it? In this talk I compare per-market models with pooling many zones into one, and share what a model learns when it sees all of Europe at once.*  
+
 Want to attend? Attendance is free. [Apply here](https://luma.com/dom2d9s0).
 
 Interested in giving a talk at one of the future events? [Apply here](/spark/)!
