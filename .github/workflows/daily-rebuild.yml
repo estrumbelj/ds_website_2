@@ -1,0 +1,30 @@
+name: Daily rebuild
+
+# Hugo bakes "today" into the site at build time (used to sort events into
+# "What's on" vs "Past events", show the next upcoming event, etc.) — with no
+# new commits, the site never notices a day has passed. This workflow pokes
+# Netlify once a day so the site refreshes itself even when nobody has
+# pushed anything.
+#
+# One-time setup required (see README.md): create a Netlify build hook and
+# add its URL as the repo secret NETLIFY_BUILD_HOOK. Without that secret set,
+# this workflow runs but does nothing.
+
+on:
+  schedule:
+    # 02:00 UTC = 03:00 CET / 04:00 CEST -- well into "today" in Ljubljana
+    # before anyone is likely checking the site.
+    - cron: "0 2 * * *"
+  workflow_dispatch: {}
+
+jobs:
+  trigger-netlify-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Netlify build hook
+        run: |
+          if [ -z "${{ secrets.NETLIFY_BUILD_HOOK }}" ]; then
+            echo "::error::NETLIFY_BUILD_HOOK secret is not set -- see README.md for setup."
+            exit 1
+          fi
+          curl --fail -X POST -d '{}' "${{ secrets.NETLIFY_BUILD_HOOK }}"

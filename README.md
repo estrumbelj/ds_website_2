@@ -15,6 +15,31 @@ Netlify builds with the Hugo version pinned in `netlify.toml`. There's no
 separate publish step: pushing to `main` triggers a Netlify build, and the
 change is live within a minute or two.
 
+### Why the site needs a daily rebuild
+
+The site is static: whether an event shows as "What's on" or "Past events",
+and which event appears as "Next up" on the home page, is all decided once,
+at build time, based on the date that build happened to run. If nobody pushes
+anything for a few days, the site doesn't notice time has passed — an event
+that happened yesterday can keep showing as upcoming until the next build.
+
+`.github/workflows/daily-rebuild.yml` fixes this by pinging Netlify once a
+day (02:00 UTC) to rebuild even with no content changes, so the site's sense
+of "today" never drifts for more than a day. **One-time setup, done once by
+whoever administers the Netlify project:**
+
+1. Netlify dashboard → **Project configuration → Developer settings →
+   Continuous deployment → Build hooks** → **Add build hook**. Name it
+   anything (e.g. "Daily rebuild"), branch `main`, save — copy the URL it
+   gives you.
+2. GitHub repo → **Settings → Secrets and variables → Actions → New
+   repository secret**. Name: `NETLIFY_BUILD_HOOK`. Value: the URL from
+   step 1.
+
+That's it — the workflow runs on its own from then on. To test it without
+waiting for 02:00 UTC, go to the repo's **Actions** tab → "Daily rebuild" →
+**Run workflow**.
+
 ## Where things live
 
 | Path | What |
