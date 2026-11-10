@@ -105,7 +105,7 @@
       <h2 class="section-label">Recently</h2>
       <a class="arrow-link" href="{{ "news/" | relURL }}">All news &amp; events →</a>
     </div>
-    {{- range first 4 $events }}
+    {{- range first 4 (where $events "iso" "<" $today) }}
     {{- if .hasBody }}
     <a class="newsrow" href="{{ .url }}">
     {{- else }}
